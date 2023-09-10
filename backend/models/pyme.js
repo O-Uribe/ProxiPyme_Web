@@ -8,7 +8,11 @@ const pymeSchema = mongoose.Schema({
     age: {
         type: Number,
         require: true,
-    }
+    },
+    email: {
+        type: String,
+        require: true,
+    },
 });
 
-module.exports = mongoose.model('pymes', pymeSchema);
+module.exports = mongoose.model("pymes", pymeSchema);

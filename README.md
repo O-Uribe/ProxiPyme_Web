@@ -10,4 +10,5 @@ librerias que se suman:
 
 ```bash
 npm i mongobd mongoose dotenv
+# dotenv aun no se usarlo, pero pronto
 ```
