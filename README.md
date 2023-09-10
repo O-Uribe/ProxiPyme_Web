@@ -2,4 +2,12 @@
 
 En la carpeteta back y front
 
-'npm install'
+```bash
+npm install
+```
+
+librerias que se suman:
+
+```bash
+npm i mongobd mongoose dotenv
+```
