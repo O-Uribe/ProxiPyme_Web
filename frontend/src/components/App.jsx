@@ -1,6 +1,6 @@
 import React from "react";
 import 'bulma/css/bulma.min.css';
-import './app.css';
+import './App.css';
 export const App = () => {
    return (
        <div>
