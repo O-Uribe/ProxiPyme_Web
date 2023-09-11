@@ -7,11 +7,12 @@ export const App = () => {
         <h1 class="title">Bienvenidos a Proxi Pyme</h1>
         <h2 class="subtitle">Formulario De Registro</h2>
         
-        
+    
+
 
        </div>
           
-    
+          
 
 
 
