@@ -4,8 +4,10 @@ import 'bulma/css/bulma.min.css';
 export const App = () => {
    return (
        <div>
-        <h1>Bienvenidos a Proxi Pyme</h1>
-        <p>Formulario De Registro</p>
+        <h1 class="title">Bienvenidos a Proxi Pyme</h1>
+        <h2 class="subtitle">Formulario De Registro</h2>
+        
+        
 
        </div>
           
