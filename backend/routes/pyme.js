@@ -2,19 +2,38 @@ const express = require("express");
 const pymeSchema = require("../models/pyme");
 const router = express.Router();
 
-// CREATE pyme
+// REGISTER
 router.post("/pyme", (req, res) => {
-    // res.send('create pyme')
     const pyme = pymeSchema(req.body);
-    // console.log(pyme.name);
-    pyme.save()
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+
+    const emailFound = pymeSchema.find({ email: pyme.email });
+    if (!emailFound) return res.status(400).json({ message: "Email found" });
+    else
+        pyme.save()
+            .then((data) => res.json(data))
+            .catch((error) => res.json({ message: error }));
 });
 
-// creare una funcion para que se busquen de manera mas rapido
-// luego conectamos esta parte con el de crear un docuemento
-// y verificamos si existe el dato para la verific en el register o login
+// LOGIN
+// router.post("/pyme", (req, res) => {
+//     const pyme = pymeSchema(req.body);
+
+//     const emailFound = pymeSchema.find();
+//     console.log(!emailFound);
+//     if (!emailFound) return res.status(400).json({ message: "Not Found" });
+//     else res.send("SI SOYYYYYYY");
+// });
+
+//
+//
+//
+//
+//
+//
+//
+// ACTUALIZACION:
+// dentro de un router post podemos utilizar func de mongo
+// esta parte queda obsoleta por el momento
 function buscarPorNombre(req, res, nombre) {
     pymeSchema
         .find({ email: nombre })
@@ -38,7 +57,7 @@ function buscarPorNombre(req, res, nombre) {
 
 // aqui llamamos la fun
 router.get("/pyme", (req, res) => {
-    const nombre = "si@gmail.com"; // <--- este dato cambia segun lo que ingrese el usuario.
+    const nombre = "lanina@gmail.com"; // <--- este dato cambia segun lo que ingrese el usuario.
     // ejemplo verificamos el correo para que no se dupliquen usuarios
     buscarPorNombre(req, res, nombre);
 });
