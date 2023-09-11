@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bulma": "^0.9.4",
     "concurrently": "^7.0.0"
   },
   "scripts": {
