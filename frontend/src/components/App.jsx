@@ -17,7 +17,7 @@ export const App = () => {
         {
           !user.length > 0
           ? <Formulario setUser={setUser}    />
-          : <Home user={user} />
+          : <Home user={user} setUser={setUser} />
         }
 
 
