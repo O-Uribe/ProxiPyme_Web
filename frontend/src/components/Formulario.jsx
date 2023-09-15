@@ -13,7 +13,7 @@ export function Formulario(){
 
     e.preventDefault()
 
-     if(nombre === "" || contraseña === ""){
+     if(nombre == "" || contraseña == ""){
 
         setError(true)
         return
