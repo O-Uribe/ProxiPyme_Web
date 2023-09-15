@@ -51,11 +51,14 @@ export function Formulario(){
 
     </form>
 
-    {error && <p>Todos los campos son obligatorios</p> }
-
+    {error && <p>Todos los campos son obligatorios</p> 
+}
 </section>
 
+
+
 )
+
 
 
 }
