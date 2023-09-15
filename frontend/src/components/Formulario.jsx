@@ -18,7 +18,7 @@ export function Formulario(){
         setError(true)
         return
      } 
-
+     setError(false)
     } 
     
     return(
