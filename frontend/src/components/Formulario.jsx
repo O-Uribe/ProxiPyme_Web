@@ -9,7 +9,7 @@ export function Formulario(){
     const [error, setError] = useState(false)
 
     
-    const handleSubmit = () =>{
+    const handleSubmit = (e) =>{
 
     e.preventDefault()
 
