@@ -14,9 +14,14 @@ export const App = () => {
         <h1 class="title">Bienvenidos a Proxi Pyme</h1>
         <h2 class="title">Formulario De Registro</h2>
         
-        
-         <Formulario setUser={setUser}    />
-         <Home/>
+        {
+          !user.length > 0
+          ? <Formulario setUser={setUser}    />
+          : <Home/>
+        }
+
+
+         
        </div>
           
           
