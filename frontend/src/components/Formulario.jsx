@@ -49,7 +49,7 @@ export function Formulario({ setUser }){
 
 
 
-         <button>Iniciar Sesion</button>
+         <button class="button is-link is-rounded">Iniciar Sesion</button>
 
     </form>
 
