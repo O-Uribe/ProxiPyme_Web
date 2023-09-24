@@ -14,9 +14,7 @@ export const App = () => {
         <h1 class="title">Bienvenidos a Proxi Pyme</h1>
         <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
-    <li><a href="#"> <span class="icon is-small">
-          <i class="fas fa-home" aria-hidden="true"></i>
-        </span> Empresas</a></li>
+    <li><a href="#">Empresas</a></li>
     <li><a href="#">Servicios</a></li>
     <li><a href="#">Perfil De Usuario</a></li>
     <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
