@@ -12,12 +12,40 @@ export const App = () => {
   return (
        <div>
         <h1 class="title">Bienvenidos a Proxi Pyme</h1>
-        <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
-    <li><a href="#">Empresas</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Perfil De Usuario</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
+    <li>
+      <a href="#">
+        <span class="icon is-small">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </span>
+        <span>Bulma</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="icon is-small">
+          <i class="fas fa-book" aria-hidden="true"></i>
+        </span>
+        <span>Documentation</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="icon is-small">
+          <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+        </span>
+        <span>Components</span>
+      </a>
+    </li>
+    <li class="is-active">
+      <a href="#">
+        <span class="icon is-small">
+          <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+        </span>
+        <span>Breadcrumb</span>
+      </a>
+    </li>
   </ul>
 </nav>
         <h2 class="title">Formulario De Registro</h2>
