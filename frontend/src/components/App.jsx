@@ -14,10 +14,10 @@ export const App = () => {
         <h1 class="title">Bienvenidos a Proxi Pyme</h1>
         <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
-    <li><a href="#">Bulma</a></li>
-    <li><a href="#">Documentation</a></li>
-    <li><a href="#">Components</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+    <li><a href="#">Empresas</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Perfil De Usuario</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
   </ul>
 </nav>
         <h2 class="title">Formulario De Registro</h2>
