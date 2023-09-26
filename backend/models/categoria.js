@@ -1,31 +1,22 @@
 const mongoose = require("mongoose");
 
 const pymeSchema = mongoose.Schema({
-    Id_Local: {
+    Id_Categoria: {
         type: Number,
         required: true,
     },
-    Nombre_Local: {
+    Nombre_Categoria: {
         type: String,
         required: true,
     },
-
-    Direccion: {
+    Id_Analitica: {
         type: String,
         required: true,
     },
     Descripcion: {
         type: String,
-        required: true,
-    },
-    Modalidad_operacion: {
-        type: String,
-        required: true,
-    },
-    Id_Dueño: {
-        type: Number,
-        required: true,
+        required: false,
     },
 });
 
-module.exports = mongoose.model("pymes", pymeSchema);
+module.exports = mongoose.model("Categoria", pymeSchema);
