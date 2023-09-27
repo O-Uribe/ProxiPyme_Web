@@ -16,7 +16,7 @@ export const App = () => {
     <><div class="container">
       <div class="notification is-black">
         <strong><h1 class="title">Bienvenidos a Proxi Pyme</h1></strong>
-        <FcShop style={{fontSize: "90px"}}/>
+        <FcShop style={{fontSize: "150px"}}/>
       </div>
     </div><div>
 
