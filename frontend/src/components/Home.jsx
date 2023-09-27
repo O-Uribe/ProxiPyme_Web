@@ -1,3 +1,4 @@
+import { FaBeer } from 'react-icons/fa';
 export function Home({user, setUser}) {
 
 

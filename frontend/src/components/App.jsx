@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBeer } from 'react-icons/fa';
 import 'bulma/css/bulma.min.css';
 import { Home } from "./Home";
 import { Formulario } from "./Formulario";
