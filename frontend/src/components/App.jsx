@@ -29,7 +29,7 @@ export const App = () => {
           <ul>
             <li><a href="#">Empresas</a></li>
             <li><a href="#">Servicios</a></li>
-            <li><a href="./Perfil">Perfil De Usuario<Perfil/></a></li>
+            <li><a href="./Perfil"><Perfil/></a></li>
             <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
           </ul>
         </nav>
