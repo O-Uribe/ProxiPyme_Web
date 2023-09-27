@@ -30,6 +30,7 @@ export const App = () => {
             <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
           </ul>
         </nav>
+        
         <h2 class="title">Formulario De Registro</h2>
 
         {!user.length > 0
