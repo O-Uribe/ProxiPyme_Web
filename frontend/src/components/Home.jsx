@@ -17,7 +17,7 @@ export function Home({user, setUser}) {
           
 
           
-           <h2 class="title">{user}</h2>
+          <h2 class="title">{user}</h2>
            <button class="button is-link is-rounded" onClick={handLeLogout}>Cerrar Sesion</button>
         
            </div>
