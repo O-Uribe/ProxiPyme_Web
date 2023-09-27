@@ -4,6 +4,7 @@ import 'bulma/css/bulma.min.css';
 import { Home } from "./Home";
 import { Formulario } from "./Formulario";
 import { useState } from "react";
+import { Perfil } from "./Perfil";
 import './App.css';
 export const App = () => {
    
