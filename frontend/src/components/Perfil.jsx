@@ -11,7 +11,7 @@ export const Perfil = () => {
 
 return (
 
-<Perfil/>
+<h1></h1>
 
 
 
