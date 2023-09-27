@@ -6,4 +6,4 @@ import { FcShop } from "react-icons/fc";
 
 
 
-<h1><Perfil/></h1>
+<h1>Hola Mundo</h1>
