@@ -10,27 +10,35 @@ export const App = () => {
   
   
   return (
-       <div>
-        <h1 class="title">Bienvenidos a Proxi Pyme</h1>
+
+
+    <><div class="container">
+      <div class="notification is-black">
+        <strong><h1 class="title">Bienvenidos a Proxi Pyme</h1></strong>
+      </div>
+    </div><div>
+
+
+
+
+
         <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="#">Empresas</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Perfil De Usuario</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
-  </ul>
-</nav>
+          <ul>
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Perfil De Usuario</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Proximamente</a></li>
+          </ul>
+        </nav>
         <h2 class="title">Formulario De Registro</h2>
-        
-        {
-          !user.length > 0
-          ? <Formulario setUser={setUser}    />
-          : <Home user={user} setUser={setUser} />
-        }
+
+        {!user.length > 0
+          ? <Formulario setUser={setUser} />
+          : <Home user={user} setUser={setUser} />}
 
 
-         
-       </div>
+
+      </div></>
           
           
 

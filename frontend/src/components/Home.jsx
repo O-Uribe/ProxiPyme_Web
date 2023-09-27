@@ -12,7 +12,7 @@ export function Home({user, setUser}) {
        <div>
            
           <div class="container">
-          <div class="notification is-primary">
+          <div class="notification is-black">
           <strong>Bienvenido</strong>
           
 
