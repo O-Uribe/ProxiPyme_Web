@@ -6,4 +6,19 @@ import { FcShop } from "react-icons/fc";
 
 
 
-<h1>Hola Mundo</h1>
+export const Perfil = () => {
+
+
+return (
+
+<h1>Bienvenido</h1>
+
+
+
+
+)
+
+
+
+}
+
