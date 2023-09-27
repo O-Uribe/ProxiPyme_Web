@@ -3,7 +3,6 @@ import { FcShop } from "react-icons/fc";
 import 'bulma/css/bulma.min.css';
 import { Home } from "./Home";
 import { Formulario } from "./Formulario";
-import { Perfil } from "./Perfil";
 import { useState } from "react";
 import './App.css';
 export const App = () => {
