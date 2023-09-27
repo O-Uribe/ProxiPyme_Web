@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBeer } from 'react-icons/fa';
+import { FcShop } from "react-icons/fc";
 import 'bulma/css/bulma.min.css';
 import { Home } from "./Home";
 import { Formulario } from "./Formulario";
@@ -12,14 +12,15 @@ export const App = () => {
   
   return (
 
-
+    
     <><div class="container">
       <div class="notification is-black">
         <strong><h1 class="title">Bienvenidos a Proxi Pyme</h1></strong>
+        <FcShop/>
       </div>
     </div><div>
 
-
+    
 
 
 

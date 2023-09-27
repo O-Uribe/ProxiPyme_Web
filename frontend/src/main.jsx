@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBeer } from 'react-icons/fa';
+import { FcShop } from "react-icons/fc";
 import 'bulma/css/bulma.min.css';
 import ReactDOM from 'react-dom/client'
 import { App } from './components/App';

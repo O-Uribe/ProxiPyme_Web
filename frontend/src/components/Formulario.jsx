@@ -1,6 +1,6 @@
 import "./Formulario.css"
 import { useState } from "react"
-import { FaBeer } from 'react-icons/fa';
+import { FcShop } from "react-icons/fc";
 
 export function Formulario({ setUser }){
 

@@ -1,4 +1,4 @@
-import { FaBeer } from 'react-icons/fa';
+import { FcShop } from "react-icons/fc";
 export function Home({user, setUser}) {
 
 
