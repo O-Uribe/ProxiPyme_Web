@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
 import Register from './component/Register';
+import Index from './component/Index';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     /*element: Especifica el componente al cual dirigirse */
     <Router>
       <Routes>
+        <Route path="/" element={<Index/>}/>
         <Route path='/register' element={<Register/>}/>
       </Routes>
     </Router>
