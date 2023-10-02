@@ -15,20 +15,20 @@ function Index() {
                     <div className="columns">
                         {/* La primera columna muestra informacion sobre la plataforma */}
                         <div className="column is-6">
-                            <h1 className="title has-text-black">¿Que es Proxipyme?</h1>
+                            <h1 className="title has-text-black">¿Qué es Proxipyme?</h1>
                             {/* Se hace uso de aside con un tamaño mediano para mostrar contenido relacionado a la pagina */}
                             <aside className="is-medium menu">
-                                <p className="menu-label has-text-black">Una plataforma que aborda problematicas presentes para que las pymes puedan
-                                    destacar en el mercado digital, proporcionando oportunidades de crecimiento y visibilidad </p>
+                                <p className="menu-label has-text-black">Una plataforma que aborda problemáticas presentes para que las pymes
+                                    puedan destacar en el mercado digital, proporcionando oportunidades de crecimiento y visibilidad </p>
                             </aside>
                         </div>
 
                         {/* Y la segunda el origen de esta */}
                         <div className="column is-6">
-                            <h1 className="title has-text-black">¿Como nace Proxipyme?</h1>
+                            <h1 className="title has-text-black">¿Cómo nace Proxipyme?</h1>
                             <aside className="is-medium menu">
-                                <p className="menu-label has-text-black">Proxipyme surge tras un analisis sobre las limitaciones que tienen las pymes debido
-                                    a su dependencia en las redes sociales, lo que limita su visibilidad y exposicion al publico objetivo</p>
+                                <p className="menu-label has-text-black">Proxipyme surge tras un análisis sobre las limitaciones que tienen las pymes
+                                    debido a su dependencia en las redes sociales, lo que limita su visibilidad y exposición al público objetivo</p>
                             </aside>
                         </div>
                     </div>
@@ -38,13 +38,13 @@ function Index() {
                 <hr className="has-background-danger" />
 
                 {/* Indica el titulo del nuevo contenido */}
-                <h1 className="title has-text-black">Unete a Nosotros</h1>
+                <h1 className="title has-text-black">Únete a nosotros</h1>
                 {/* Se crea un nuevo contenedor que igualmente se divide en dos partes iguales */}
                 <div className="container column is-12">
                     <div className="columns">
                         {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
                         <div className="column is-6">
-                            <a className="button is-fullwidth has-background-danger has-text-white" href="/login">Iniciar Sesion</a>
+                            <a className="button is-fullwidth has-background-danger has-text-white" href="/login">Iniciar Sesión</a>
                         </div>
                         {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
                         <div className="column is-6">

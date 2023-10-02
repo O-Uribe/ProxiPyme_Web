@@ -12,7 +12,7 @@ function Register() {
                         {/* Configura un estilo de columna */}
                         <div className="column is-10 is-offset-1">
                             {/* Da un estilo de color negro al titulo */}
-                            <h3 className="title has-text-black">¿Deseas registrarte en "Proxipyme"?</h3>
+                            <h3 className="title has-text-black">¿Quieres registrarte en "Proxipyme"?</h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
                             <hr className="login-hr has-background-danger" />
 
@@ -42,7 +42,7 @@ function Register() {
                                     {/* Crea el campo para los terminos y condiciones, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <label className="checkbox">
-                                            <input type="checkbox" required /> Acepto los <a className="has-text-danger" href="#"> Terminos y Condiciones</a>
+                                            <input type="checkbox" required />Autorizo el envíen de notificaciones a mi correo
                                         </label>
                                     </div>
 
