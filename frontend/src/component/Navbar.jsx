@@ -27,10 +27,10 @@ function Navbar() {
                             <a className="navbar-link">Redes Sociales</a>
                             {/* Crea el menu despegable */}
                             <div className="navbar-dropdown">
-                                {/* Los contenidos de la lista despegable redireccionan a las distintas redes sociales */}
-                                <a className="navbar-item" href="https://www.twitter.com/">Twitter</a>
-                                <a className="navbar-item" href="https://www.instagram.com/">Instagram</a>
-                                <a className="navbar-item" href="https://www.facebook.com/">Facebook</a>
+                                {/* Los contenidos de la lista desplegable redireccionan a las distintas redes sociales */}
+                                <a className="navbar-item" href="https://www.twitter.com/"><i className="fab fa-twitter"></i>Twitter</a>
+                                <a className="navbar-item" href="https://www.instagram.com/"><i className="fab fa-instagram"></i>Instagram</a>
+                                <a className="navbar-item" href="https://www.facebook.com/"><i className="fab fa-facebook"></i>Facebook</a>
                             </div>
                         </div>
                     </div>

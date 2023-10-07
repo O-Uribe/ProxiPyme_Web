@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
 import Register from './component/Register';
 import Index from './component/Index';
+import Panel from './component/Panel';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/panel' element={<Panel/>}/>
       </Routes>
     </Router>
   )
