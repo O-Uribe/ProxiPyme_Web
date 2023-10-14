@@ -5,6 +5,9 @@ import './App.css'
 import Register from './component/Register';
 import Index from './component/Index';
 import HomeIndex from './component/HomeIndex';
+import Favoritos from './component/Favoritos';
+import Estadisticas from './component/Estadisticas';
+import Mapa from './component/Mapa';
 
 function App() {
   return (
@@ -12,11 +15,15 @@ function App() {
     /*Routes: Define las rutas utilizando Route*/
     /*path: Especifica la URL de la ruta */
     /*element: Especifica el componente al cual dirigirse */
+    
     <Router>
       <Routes>
         <Route path="/" element={<Index/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<HomeIndex/>}/>
+        <Route path="/estadisticas" element={<Estadisticas/>}/>
+        <Route path='/mapa' element={<Mapa/>}/>
+        <Route path="/favoritos" element={<Favoritos/>} />
       </Routes>
     </Router>
   )

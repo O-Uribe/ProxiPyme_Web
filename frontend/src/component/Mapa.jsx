@@ -2,7 +2,7 @@ import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 
-function HomeIndex() {
+function Mapa() {
     return (
         <div className="container">
             {/* Se importa el componente Navbar correspondiente a la barra de navegacion */}
@@ -21,7 +21,7 @@ function HomeIndex() {
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
-                    <h3 className="title">Pymes recomendadas para ti</h3>
+                    <h3 className="title">Mapa con pymes</h3>
                 </div>
             </section>
 
@@ -31,4 +31,4 @@ function HomeIndex() {
     )
 }
 
-export default HomeIndex
+export default Mapa

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Navbar() {
     return (
@@ -28,9 +28,9 @@ function Navbar() {
                             {/* Crea el menu despegable */}
                             <div className="navbar-dropdown">
                                 {/* Los contenidos de la lista desplegable redireccionan a las distintas redes sociales */}
-                                <a className="navbar-item" href="https://www.twitter.com/"><i className="fab fa-twitter"></i>Twitter</a>
-                                <a className="navbar-item" href="https://www.instagram.com/"><i className="fab fa-instagram"></i>Instagram</a>
-                                <a className="navbar-item" href="https://www.facebook.com/"><i className="fab fa-facebook"></i>Facebook</a>
+                                <a className="navbar-item" href="https://www.twitter.com/"><i className="fab fa-twitter mr-2"></i> Twitter</a>
+                                <a className="navbar-item" href="https://www.instagram.com/"><i className="fab fa-instagram mr-2"></i> Instagram</a>
+                                <a className="navbar-item" href="https://www.facebook.com/"><i className="fab fa-facebook mr-2"></i> Facebook</a>
                             </div>
                         </div>
                     </div>
