@@ -19,7 +19,7 @@ const userSchema = mongoose.Schema({
     },
     Detalles_Perfil: {
         type: String,
-        required: falso,
+        required: false,
     },
 });
 

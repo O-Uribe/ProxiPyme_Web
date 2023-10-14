@@ -10,6 +10,12 @@ const pymeRouters = require("./routes/pyme");
 
 // middleware
 app.use(express.json());
+app.use(
+    cors({
+        origin: "http://localhost:5178",
+    })
+);
+
 app.use("/api", userRouters);
 app.use("/api", pymeRouters);
 

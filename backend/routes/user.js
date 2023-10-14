@@ -4,7 +4,7 @@ const userSchema = require("../models/user");
 const router = express.Router();
 
 // CREATE USER
-router.post('/user', (req, res) => {
+router.post("/user", (req, res) => {
     // res.send('create user')
     const user = userSchema(req.body);
     user.save()
@@ -13,7 +13,7 @@ router.post('/user', (req, res) => {
 });
 
 // GET ALL USER
-router.get('/user', (req, res) => {
+router.get("/user", (req, res) => {
     userSchema
         .find()
         .then((data) => res.json(data))
