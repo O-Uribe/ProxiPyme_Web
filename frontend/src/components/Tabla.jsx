@@ -68,6 +68,7 @@ return (
     columns={columnas}
     data={tablaCampeones}
     title="Dashboard"
+    pagination
     />
 </div>
 
