@@ -58,6 +58,15 @@ export const Dashboard = () => {
 
 
        newSeries.setData(initialData);
+
+
+
+
+       return () => [ chart.remove()]; 
+
+       
+
+       
     },  []);
 
 
