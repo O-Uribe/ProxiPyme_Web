@@ -1,0 +1,24 @@
+.Estilo{
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgb(3, 109, 151)   ;
+    background-color: rgb(25, 2, 126);
+    padding: 10px;
+    text-align: left;
+    border: 2px solid #210133;
+}
+
+.Centrado {
+    display: grid;
+    place-items: center;    /* Centra vertical y horizontalmente */
+    background: rgb(255, 255, 255) ;          /* Asegura que ocupe toda la altura de la ventana */
+  }
+
+  .Listoca{
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+
+  }
