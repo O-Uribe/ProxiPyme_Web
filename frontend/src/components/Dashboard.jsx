@@ -42,7 +42,7 @@ export const Dashboard = () => {
              },
 
 
-           width: 500,
+           width: 1000,
            height: 200, 
 
         });
