@@ -8,8 +8,14 @@ router.post("/user", (req, res) => {
     // res.send('create user')
     const user = userSchema(req.body);
     user.save()
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+        .then((data) => {
+            console.log("Usuario creado:", data);
+            res.json(data);
+        })
+        .catch((error) => {
+            console.error("Error al crear usuario:", error);
+            res.json({ message: error });
+        });
 });
 
 // GET ALL USER

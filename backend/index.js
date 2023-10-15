@@ -1,5 +1,6 @@
+const cors = require("cors");
 const express = require("express"),
-    PORT = 5000,
+    PORT = 4000,
     app = express();
 // const mongoose = require("mongoose");
 const Conection = require("./bd");
@@ -12,7 +13,7 @@ const pymeRouters = require("./routes/pyme");
 app.use(express.json());
 app.use(
     cors({
-        origin: "http://localhost:5178",
+        origin: "http://localhost:5173",
     })
 );
 
