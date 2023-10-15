@@ -5,6 +5,7 @@ import { Home } from "./Home";
 import { Formulario } from "./Formulario";
 import { useState } from "react";
 import { Perfil } from "./Perfil";
+import { Dashboard } from "./Dashboard";
 import './App.css';
 export const App = () => {
    
@@ -45,7 +46,7 @@ export const App = () => {
       </div></>
           
           
-
+       
 
 
 
