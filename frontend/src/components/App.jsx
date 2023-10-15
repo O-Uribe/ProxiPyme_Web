@@ -41,11 +41,13 @@ export const App = () => {
           ? <Formulario setUser={setUser} />
           : <Home user={user} setUser={setUser} />}
 
-
+       <div>
+           <h1><Dashboard/></h1>
+       </div>
 
       </div></>
           
-          
+       
        
 
 
