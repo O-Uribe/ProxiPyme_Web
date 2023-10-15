@@ -2,6 +2,7 @@
   "dependencies": {
     "bulma": "^0.9.4",
     "concurrently": "^7.0.0",
+    "lightweight-charts": "^4.1.0",
     "react-icons": "^4.11.0"
   },
   "scripts": {
