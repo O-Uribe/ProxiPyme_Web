@@ -42,7 +42,7 @@ export const App = () => {
           : <Home user={user} setUser={setUser} />}
 
        <div>
-           <h1><Dashboard/></h1>
+           <h1>Dashboard<Dashboard/></h1>
        </div>
 
       </div></>
