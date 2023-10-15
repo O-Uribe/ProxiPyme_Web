@@ -69,6 +69,8 @@ return (
     data={tablaCampeones}
     title="Dashboard"
     pagination
+    fixedHeader
+    fixedHeaderScrollHeight="600px"
     />
 </div>
 
