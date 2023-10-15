@@ -1,4 +1,5 @@
 import { FcShop } from "react-icons/fc";
+import { createChart } from 'lightweight-charts';
 export function Home({user, setUser}) {
 
 
