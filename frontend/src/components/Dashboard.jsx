@@ -13,6 +13,7 @@ export const Dashboard = () => {
     useEffect(() => {
 
         const initialData = [
+            { time: '2018-12-21', value: 33.61 },
             { time: '2018-12-22', value: 32.51 },
             { time: '2018-12-23', value: 31.11 },
             { time: '2018-12-24', value: 27.02 },
@@ -50,9 +51,9 @@ export const Dashboard = () => {
 
         const newSeries = chart.addAreaSeries({
         
-          lineColor: "#2962FF",    
-          topColor: "#2962FF",
-          bottomColor: "rgba(41, 98, 255, 0.28)",
+          lineColor: "purple",
+          topColor: "yellow",
+          bottomColor: "purple",
 
         }); 
 
