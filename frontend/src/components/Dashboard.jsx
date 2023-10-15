@@ -43,7 +43,7 @@ export const Dashboard = () => {
 
 
            width: 1000,
-           height: 200, 
+           height: 400, 
 
         });
 
