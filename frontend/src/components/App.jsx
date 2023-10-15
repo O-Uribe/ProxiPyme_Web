@@ -6,6 +6,7 @@ import { Formulario } from "./Formulario";
 import { useState } from "react";
 import { Perfil } from "./Perfil";
 import { Dashboard } from "./Dashboard";
+import { Tabla } from "./Tabla";
 import './App.css';
 export const App = () => {
    
@@ -44,6 +45,13 @@ export const App = () => {
        <div>
            <h1><Dashboard/></h1>
        </div>
+
+      <div>
+        
+        <h1><Tabla/></h1>
+      
+      </div>
+
 
       </div></>
           
