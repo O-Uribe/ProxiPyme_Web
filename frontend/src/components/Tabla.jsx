@@ -51,7 +51,7 @@ const columnas =  [
         name: "Campeon",
         selector: "campeon",
         sortable: true
-
+        
     },
 ]   
 
@@ -62,7 +62,7 @@ export const Tabla = () => {
 
 return (
 
-<div>
+<div className="table-responsive">
    
     <DataTable
     columns={columnas}
