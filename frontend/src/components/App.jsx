@@ -57,7 +57,7 @@ export const App = () => {
 
       <div>
 
-        <h1><Mapa/></h1>
+        <Mapa/>
 
       </div>
 
