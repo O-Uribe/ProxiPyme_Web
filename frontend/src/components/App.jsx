@@ -1,6 +1,8 @@
 import React from "react";
 import { FcShop } from "react-icons/fc";
 import 'bulma/css/bulma.min.css';
+import {Map, Marker, Popup, TileLayer} from "react-leaflet";
+import {Icon} from "leaflet";
 import { Home } from "./Home";
 import { Formulario } from "./Formulario";
 import { useState } from "react";
