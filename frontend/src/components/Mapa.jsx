@@ -6,6 +6,11 @@ import { FcShop } from "react-icons/fc";
 import { createChart } from 'lightweight-charts';
 import {Map, Marker, Popup, TileLayer} from "react-leaflet";
 import {Icon} from "leaflet";
+import { MapContainer } from 'react-leaflet/MapContainer';
+import { TileLayer } from 'react-leaflet/TileLayer';
+import { useMap } from 'react-leaflet/hooks';
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+
 
 export const Mapa = () => {
 
