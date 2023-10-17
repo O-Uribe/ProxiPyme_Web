@@ -57,24 +57,7 @@ export const App = () => {
 
       <div>
 
-      <Map center={[52.6376, -1.135171]} zoom={12}>
-       
-       <TileLayer
-       
-       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 
-       contributors'
-       
-       
-       
-       
-       
-       
-       
-       
-       />
-
-    </Map>
+        <Mapa/>
 
       </div>
 
