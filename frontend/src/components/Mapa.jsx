@@ -12,7 +12,7 @@ export const Mapa = () => {
 
 return (
 
-<div>
+
 
    <Map center={[52.6376, -1.135171]} zoom={12}>
        
@@ -33,14 +33,14 @@ return (
 
     </Map>
 
-</div>
 
 
 
 
 
 
-)
+
+);
 
 
 
