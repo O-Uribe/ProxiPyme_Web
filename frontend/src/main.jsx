@@ -1,7 +1,7 @@
 import React from 'react'
 import { FcShop } from "react-icons/fc";
 import { createChart } from 'lightweight-charts';
-import {Map, Marker, Popup, TileLayer} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from 'https://cdn.esm.sh/react-leaflet';
 import {Icon} from "leaflet";
 import 'bulma/css/bulma.min.css';
 import ReactDOM from 'react-dom/client'
