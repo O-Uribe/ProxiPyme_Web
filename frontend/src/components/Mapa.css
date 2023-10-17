@@ -1,5 +1,5 @@
-.mapa{
+.leaflet-container {
 
-    background-color: wheat;
-
+    width: 50%;
+    height: 50vh;
 }
