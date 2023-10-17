@@ -1,6 +1,7 @@
 import React from "react";
 import { FcShop } from "react-icons/fc";
 import 'bulma/css/bulma.min.css';
+import "./Mapa.css";
 import {MapContainer, Marker, Popup, TileLayer} from 'https://cdn.esm.sh/react-leaflet';
 import {Icon} from "leaflet";
 import { Home } from "./Home";
