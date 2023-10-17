@@ -4,7 +4,8 @@ import "./Mapa.css";
 import { useState } from "react";
 import { FcShop } from "react-icons/fc";
 import { createChart } from 'lightweight-charts';
-
+import {Map, Marker, Popup, TileLayer} from "react-leaflet";
+import {Icon} from "leaflet";
 
 export const Mapa = () => {
 
