@@ -10,17 +10,17 @@ import DataTable from "react-data-table-component";
 
 const tablaCampeones = [
 
-    { id:1, año:"2018", campeon: "Naruto"  },
-    { id:2, año:"2018", campeon: "Sasuke" },
-    { id:3, año:"2018", campeon: "Kakashi" },
-    { id:4, año:"2018", campeon: "Jiraya" },
-    { id:5, año:"2018", campeon: "Sakura" },
-    { id:6, año:"2018", campeon: "Pain" },
-    { id:7, año:"2018", campeon: "Hinata" },
-    { id:8, año:"2018", campeon: "Ino"},
-    { id:9, año:"2018", campeon: "Kiba" },
-    { id:10, año:"2018", campeon: "Madara" },
-    { id:11, año:"2018", campeon: "Obito"},      
+    { visitas:1, producto:"Sushis rolls", reseña: "Rolls rellenos"  },
+    { visitas:2, producto:"Cafe de grano", reseña: "Cafe colombiano aromatizado" },
+    { visitas:3, producto:"Pescado ahumado", reseña: "Pescado sellado al vacio con aliño" },
+    { visitas:4, producto:"Papas fritas", reseña: "Papas fritas con sal de mar" },
+    { visitas:5, producto:"Bebidas variedades", reseña: "Coca cola, Sprite, Fanta" },
+    { visitas:6, producto:"Muffis", reseña: "Queques de sabores" },
+    { visitas:7, producto:"Empanadas", reseña: "Empanadas rellenas de pollo y queso" },
+    { visitas:8, producto:"Poleron", reseña: "Poleron marca nike, talla M"},
+    { visitas:9, producto:"Calcetines", reseña: "Calcetines de algodon, Talla 40" },
+    { visitas:10, producto:"Guantes", reseña: "Guantes de cuero" },
+    { visitas:11, producto:"Pantalon", reseña: "Pantalon jean skynny fit talla 42"},      
 
 
 
@@ -34,22 +34,22 @@ const tablaCampeones = [
 const columnas =  [
 
     {
-        name: "ID",
-        selector: "id",
+        name: "Visitas",
+        selector: "visitas",
         sortable: true
 
     },
    
     {
-        name: "Año",
-        selector: "año",
+        name: "Producto",
+        selector: "producto",
         sortable: true
 
     },
 
     {
-        name: "Campeon",
-        selector: "campeon",
+        name: "Reseña",
+        selector: "reseña",
         sortable: true
         
     },
