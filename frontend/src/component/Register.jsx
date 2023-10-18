@@ -1,46 +1,46 @@
 import React from "react";
-import { registrerRecuest, loginRequest } from "../api/auth";
+// import { registrerRecuest, loginRequest } from "../api/auth";
 
-export function Formulario({ setUser }) {
-    const [Nombre_Usuario, setNombre] = useState("");
-    const [Nombres, setNomApell] = useState("");
-    const [Correo_Electronico, setCorreo] = useState("");
-    const [Contrase, setContraseña] = useState("");
-    const [error, setError] = useState(false);
+export function Register({ setUser }) {
+    // const [Nombre_Usuario, setNombre] = useState("");
+    // const [Nombres, setNomApell] = useState("");
+    // const [Correo_Electronico, setCorreo] = useState("");
+    // const [Contrase, setContraseña] = useState("");
+    // const [error, setError] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        if (
-            Nombre_Usuario == "" ||
-            Nombres == "" ||
-            Correo_Electronico == "" ||
-            Contrase == ""
-        ) {
-            setError(true);
-            return;
-        }
-        setError(false);
+    //     if (
+    //         Nombre_Usuario == "" ||
+    //         Nombres == "" ||
+    //         Correo_Electronico == "" ||
+    //         Contrase == ""
+    //     ) {
+    //         setError(true);
+    //         return;
+    //     }
+    //     setError(false);
 
-        try {
-            const user = {
-                Nombre_Usuario,
-                Nombres,
-                Correo_Electronico,
-                Contrase,
-            };
-            const response = await registrerRecuest(user);
-        } catch (error) {
-            // TIPOS DE ERRORES //
-            if (error.response) {
-                console.error("Respuesta del servidor:", error.response.data);
-            } else if (error.request) {
-                console.error("No se pudo conectar al servidor.");
-            } else {
-                console.error("Error desconocido:", error.message);
-            }
-        }
-    };
+    //     try {
+    //         const user = {
+    //             Nombre_Usuario,
+    //             Nombres,
+    //             Correo_Electronico,
+    //             Contrase,
+    //         };
+    //         const response = await registrerRecuest(user);
+    //     } catch (error) {
+    //         // TIPOS DE ERRORES //
+    //         if (error.response) {
+    //             console.error("Respuesta del servidor:", error.response.data);
+    //         } else if (error.request) {
+    //             console.error("No se pudo conectar al servidor.");
+    //         } else {
+    //             console.error("Error desconocido:", error.message);
+    //         }
+    //     }
+    // };
 
     return (
         //Crea el contenedor principal de la pagina
