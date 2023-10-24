@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
     return (
@@ -8,7 +8,7 @@ function Footer() {
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
                 <div className="column is-3 has-text-rigth">
                     <b className="has-text-black">Creadores:</b><br /> José Jimenes,<br />
-                    Javier Monsálves,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
+                    Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
                 </div>
 
                 {/* Se crea una columna que ocupara las restantes y se centra el texto horizontalmente */}
@@ -20,7 +20,7 @@ function Footer() {
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
                 <div className="column is-3 has-text-rigth">
                     <b className="has-text-black">Creadores:</b><br /> José Jimenes,<br />
-                    Javier Monsálves,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
+                    Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
                 </div>
             </footer>
         </div>

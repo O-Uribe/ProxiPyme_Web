@@ -1,6 +1,7 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
+import Map from './Map';
 
 function Mapa() {
     return (
@@ -23,8 +24,11 @@ function Mapa() {
                 <div className="container has-text-black">
                     <h3 className="title">Mapa con pymes</h3>
                 </div>
-            </section>
 
+                {/* Se importa el componente mapa */}
+                <Map></Map>
+
+            </section>
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
         </div>

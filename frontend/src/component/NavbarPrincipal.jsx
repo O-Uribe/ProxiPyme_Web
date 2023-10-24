@@ -46,5 +46,4 @@ function NavbarPrincipal() {
     );
 }
 
-
 export default NavbarPrincipal;
