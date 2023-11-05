@@ -1,8 +1,23 @@
 import React from 'react';
 import Navbar from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
+import { getTasks } from "../api/auth";
 
 function PerfilPyme() {
+    const [tasks, setTasks] = useState([]);
+    useEffect(() => {
+        async function fetchTasks() {
+            try {
+                const response = await getTasks();
+                setTasks(response.data);
+                console.log(response.data);
+            } catch (error) {
+                console.error("Error al obtener tareas:", error);
+            }
+        }
+        fetchTasks();
+    }, []);
+
     return (
         <div className="container">
             <Navbar></Navbar>
@@ -26,6 +41,7 @@ function PerfilPyme() {
                         <h1 className="title has-text-black">Datos Pyme</h1>
                         <aside className="is-medium menu">
                             <p className="menu-label has-text-black"> Descripcion</p>
+                            <p className="menu-label has-text-black"><i class="fa fa-location-dot"></i></p>
                         </aside>
                     </div>
                 </div>
