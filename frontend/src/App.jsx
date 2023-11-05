@@ -8,6 +8,7 @@ import HomeIndex from './component/HomeIndex';
 import Favoritos from './component/Favoritos';
 import Estadisticas from './component/Estadisticas';
 import Mapa from './component/Mapa';
+import PPyme from './component/PerfilPyme';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/estadisticas" element={<Estadisticas/>}/>
         <Route path='/mapa' element={<Mapa/>}/>
         <Route path="/favoritos" element={<Favoritos/>} />
+        <Route path="/perfil" element={<PPyme/>} />
       </Routes>
     </Router>
   )
