@@ -1,7 +1,7 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
-
+import { Tabla } from "./Tabla";
 function Estadisticas() {
     return (
         <div className="container">
@@ -27,7 +27,7 @@ function Estadisticas() {
 
             <div>
                  
-                 
+                 <Tabla/>
 
 
             </div>
