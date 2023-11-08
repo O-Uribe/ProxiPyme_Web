@@ -40,7 +40,7 @@ export const Grafico = () => {
              },
 
 
-           width: 1000,
+           width: chartContainerRef.current.clientwidth,
            height: 400, 
 
         });
