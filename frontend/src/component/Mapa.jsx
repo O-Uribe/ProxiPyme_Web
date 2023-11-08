@@ -1,7 +1,6 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
-import Map from './Map';
 import MapView from './MapView';
 
 function Mapa() {
