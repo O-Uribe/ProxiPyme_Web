@@ -25,6 +25,13 @@ function Estadisticas() {
                 </div>
             </section>
 
+            <div>
+                 
+                 
+
+
+            </div>
+
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
         </div>
