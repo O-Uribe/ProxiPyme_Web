@@ -27,7 +27,6 @@ function App() {
         <Route path='/mapa' element={<Mapa/>}/>
         <Route path="/favoritos" element={<Favoritos/>} />
         <Route path="/perfil" element={<PPyme/>} />
-        <Route path="/editarperfil" element={<EditarPerfil/>} />
       </Routes>
     </Router>
   )
