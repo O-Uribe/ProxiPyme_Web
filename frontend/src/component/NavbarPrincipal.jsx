@@ -16,7 +16,7 @@ function NavbarPrincipal() {
                         <a className="has-text-danger-light" href="/favoritos"><i className="fas fa-heart mr-1"></i>Favoritos</a>
                     </div>
                     <div className="navbar-item ml-3 mr-3">
-                        <a className="has-text-danger-light" href="/estadisticas"><i className="fas fa-chart-pie mr-1"></i>Estadística</a>
+                        <a className="has-text-danger-light" href="/estadisticas"><i className="fas fa-chart-pie mr-1"></i>Estadísticas</a>
                     </div>
                     <div className="navbar-item ml-3 mr-3">
                         <a className="has-text-danger-light" href="/mapa"><i className="fas fa-map-marker-alt mr-1"></i>Mapa</a>
