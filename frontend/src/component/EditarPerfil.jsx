@@ -28,7 +28,7 @@ export function EditarPerfil({ setUser }){
           return(
       
       <section>
-          <h1 class="title"><FcBusinessman/>Editar Perfil</h1>
+          <h1 class="title"><FcBusinessman style={{fontSize: "100px"}}/>Editar Perfil</h1>
       
           <form 
           className="formulario"
