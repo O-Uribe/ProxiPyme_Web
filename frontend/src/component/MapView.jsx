@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer} from "react-leaflet";
 import data from "../assets/data.json";
 import Markers from "./VenueMarkers";
 
