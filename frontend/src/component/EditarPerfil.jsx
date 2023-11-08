@@ -28,7 +28,7 @@ export function EditarPerfil({ setUser }){
           return(
       
       <section>
-          <h1 class="title">Login</h1>
+          <h1 class="title">Editar Perfil</h1>
       
           <form 
           className="formulario"
