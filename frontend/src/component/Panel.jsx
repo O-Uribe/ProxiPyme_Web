@@ -1,4 +1,5 @@
 import React from 'react';
+import { EditarPerfil } from "./EditarPerfil";
 
 function Panel() {
     return (
