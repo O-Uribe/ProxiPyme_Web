@@ -5,7 +5,7 @@ import Markers from "./VenueMarkers";
 import { useLocation, useHistory } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 
-const MapView = (props) => {
+const MapView = () => {
   const [state, setState] = useState({
     currentLocation: { lat: 52.52437, lng: 13.41053 },
     zoom: 13,
