@@ -31,7 +31,7 @@ function Map() {
             />
 
 
-            {crimes.map(crime => <Marker key={crime.id} position={[crime.location.Latitude, crime.location.Longitude]} />)}
+            {crimes.map(crime => <Marker key={crime.id} position={[crime.location.Latitud, crime.location.Longitud]} />)}
         </MapContainer>
     );
 };
