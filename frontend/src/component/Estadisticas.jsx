@@ -22,15 +22,16 @@ function Estadisticas() {
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
                     <h3 className="title">Estadísticas</h3>
+                    <Tabla/>
                 </div>
             </section>
 
-            <div>
+            
                  
-                 <Tabla/>
+                
 
 
-            </div>
+            
 
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
