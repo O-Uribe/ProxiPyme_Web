@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react"
-import { FcShop } from "react-icons/fc";
+
 
 
 export function EditarPerfil({ setUser }){
