@@ -50,14 +50,14 @@ export function EditarPerfil({ setUser }){
                />
 
 <div class="field">
-  <label class="label">Name</label>
+  <label class="label">Nombre</label>
   <div class="control">
     <input class="input" type="text" placeholder="Text input"/>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Username</label>
+  <label class="label">Nombre De Usuario</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="text" placeholder="Text input" value="bulma"/>
     <span class="icon is-small is-left">
@@ -67,7 +67,7 @@ export function EditarPerfil({ setUser }){
       <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-success">This username is available</p>
+  <p class="help is-success">Permitido</p>
 </div>
 
 <div class="field">
@@ -81,23 +81,23 @@ export function EditarPerfil({ setUser }){
       <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
-  <p class="help is-danger">This email is invalid</p>
+  <p class="help is-success">Disponible</p>
 </div>
 
 <div class="field">
-  <label class="label">Subject</label>
+  <label class="label">Mas Herramientas</label>
   <div class="control">
     <div class="select">
       <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
+        <option>Cambio De Imagen Perfil</option>
+        <option>Otras Opciones</option>
       </select>
     </div>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Message</label>
+  <label class="label">Mensaje Para El Soporte</label>
   <div class="control">
     <textarea class="textarea" placeholder="Textarea"></textarea>
   </div>
@@ -107,7 +107,7 @@ export function EditarPerfil({ setUser }){
   <div class="control">
     <label class="checkbox">
       <input type="checkbox"/>
-      I agree to the <a href="#">terms and conditions</a>
+      De Acuerdo Con Los <a href="#">Terminos y Condiciones</a>
     </label>
   </div>
 </div>
@@ -116,7 +116,7 @@ export function EditarPerfil({ setUser }){
   <div class="control">
     <label class="radio">
       <input type="radio" name="question"/>
-      Yes
+      Si
     </label>
     <label class="radio">
       <input type="radio" name="question"/>
@@ -127,10 +127,10 @@ export function EditarPerfil({ setUser }){
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link">Submit</button>
+    <button class="button is-link">Guardar</button>
   </div>
   <div class="control">
-    <button class="button is-link is-light">Cancel</button>
+    <button class="button is-link is-light">Cancelar</button>
   </div>
 </div>
       
