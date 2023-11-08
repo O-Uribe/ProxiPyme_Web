@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Map, TileLayer} from "react-leaflet";
 import data from "../assets/data.json";
 import Markers from "./VenueMarkers";
-
 import { useLocation, useHistory } from "react-router-dom";
-
 import "leaflet/dist/leaflet.css";
 
 const MapView = (props) => {
