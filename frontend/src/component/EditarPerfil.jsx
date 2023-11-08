@@ -136,7 +136,7 @@ export function EditarPerfil({ setUser }){
       
       
       
-               <button class="button is-link is-rounded">Iniciar Sesion</button>
+               <button class="button is-link is-rounded">Confirmar Cambios De Perfil</button>
       
           </form>
       
