@@ -10,6 +10,7 @@ import Estadisticas from './component/Estadisticas';
 import Mapa from './component/Mapa';
 import PPyme from './component/PerfilPyme';
 
+
 function App() {
   return (
     /*Router: Indica un enrutador para gestion de rutas y navegacion*/
