@@ -2,6 +2,8 @@ import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 import { Tabla } from "./Tabla";
+import { Grafico } from "./Grafico";
+
 function Estadisticas() {
     return (
         <div className="container">
@@ -23,6 +25,7 @@ function Estadisticas() {
                 <div className="container has-text-black">
                     <h3 className="title">Estadísticas</h3>
                     <Tabla/>
+                    <Grafico/>
                 </div>
             </section>
 
