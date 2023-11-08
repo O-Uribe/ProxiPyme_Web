@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Map, TileLayer} from "react-leaflet";
+import { MapContainer, TileLayer} from "react-leaflet";
 import data from "../assets/data.json";
 import Markers from "./VenueMarkers";
 import { useLocation, useHistory } from "react-router-dom";
@@ -43,13 +43,13 @@ const MapView = (props) => {
 return (
         
 
-<Map center={state.currentLocation} zoom={state.zoom}>
+<MapContainer center={state.currentLocation} zoom={state.zoom}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
       <Markers venues={state.data.venues} />
-    </Map>
+    </MapContainer>
 
 
       
