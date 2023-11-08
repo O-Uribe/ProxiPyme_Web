@@ -33,7 +33,7 @@ const MapView = () => {
         currentLocation,
       });
       history.replace({
-        pathname: "/mapa",
+        pathname: "/map",
         state: {},
       });
     }
