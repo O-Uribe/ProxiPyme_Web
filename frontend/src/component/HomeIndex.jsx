@@ -1,6 +1,7 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
+import EditarPerfil from  './EditarPerfil';
 
 function HomeIndex() {
     return (
