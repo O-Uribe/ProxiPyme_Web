@@ -25,7 +25,7 @@ function FooterPrincipal() {
             {/* Se indica un texto de color negro y un parrafo con texto blanco */}
             <h3 className="title has-text-black"><b>Creadores</b></h3>
             <p className="menu-label has-text-white">
-              José Jimenes,<br />Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
+              José Jimenez,<br />Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
             </p>
           </aside>
         </div>
