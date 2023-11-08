@@ -2,6 +2,7 @@ import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 import Map from './Map';
+import MapView from './MapView';
 
 function Mapa() {
     return (
@@ -26,7 +27,7 @@ function Mapa() {
                 </div>
 
                 {/* Se importa el componente mapa */}
-                <Map></Map>
+                <MapView></MapView>
 
             </section>
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
