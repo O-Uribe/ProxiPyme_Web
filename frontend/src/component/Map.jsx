@@ -15,7 +15,7 @@ function Map() {
     const Mapita = useRef(null); // Crea una referencia al mapa utilizando useRef
     const Latitud = -38.7372; // Define una constante para la latitud del centro del mapa
     const Longitud = -72.6006; // Define una constante para la longitud del centro del mapa.
-    const url = "https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2019-10";
+    const url = "https://data.police.uk/api/crimes-street/all-crime? latitud =52.629729& longitud =-1.131592& fecha =2017-01";
     const {data, error} = useSwr(url, fetcher );
     const crimes = data && !error ? data.slice(0,100) :  [];
 
