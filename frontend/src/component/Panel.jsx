@@ -14,7 +14,7 @@ function Panel() {
                         <a className="has-text-danger-light" href='/perfil'><i className="far fa-user"></i> Mi Perfil</a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/editarP'><i className="far fa-edit"></i> <EditarPerfil/> </a>
+                        <a className="has-text-danger-light" href='/editarperfil'><i className="far fa-edit"></i> <EditarPerfil/> </a>
                     </div>
                     <div className="column has-text-centered my-4">
                         <a className="has-text-danger-light" href='/reportarP'><i className="far fa-flag"></i> Reportar Problema</a>
