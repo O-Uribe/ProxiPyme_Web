@@ -1,7 +1,7 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
-import MapView from './MapView';
+
 
 function Mapa() {
     return (
