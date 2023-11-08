@@ -7,7 +7,7 @@ function Footer() {
             <footer className="footer has-background-danger has-text-danger-light columns is-12">
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
                 <div className="column is-3 has-text-rigth">
-                    <b className="has-text-black">Creadores:</b><br /> José Jimenes,<br />
+                    <b className="has-text-black">Creadores:</b><br /> José Jimenez,<br />
                     Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
                 </div>
 
@@ -19,7 +19,7 @@ function Footer() {
 
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
                 <div className="column is-3 has-text-rigth">
-                    <b className="has-text-black">Creadores:</b><br /> José Jimenes,<br />
+                    <b className="has-text-black">Creadores:</b><br /> José Jimenez,<br />
                     Javier Monsálvez,<br /> Cristóbal Sandoval, <br /> Pamela Vielma.
                 </div>
             </footer>
