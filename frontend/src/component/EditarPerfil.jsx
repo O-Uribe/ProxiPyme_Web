@@ -52,14 +52,14 @@ export function EditarPerfil({ setUser }){
 <div class="field">
   <label class="label">Nombre</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input"/>
+    <input class="input" type="text" placeholder="Nombre Completo"/>
   </div>
 </div>
 
 <div class="field">
   <label class="label">Nombre De Usuario</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma"/>
+    <input class="input is-success" type="text" placeholder=""/>
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -73,7 +73,7 @@ export function EditarPerfil({ setUser }){
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@"/>
+    <input class="input is-danger" type="email" placeholder=""/>
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -81,7 +81,7 @@ export function EditarPerfil({ setUser }){
       <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
-  <p class="help is-success">Disponible</p>
+  <p class="help is-danger">No Disponible</p>
 </div>
 
 <div class="field">
@@ -99,7 +99,7 @@ export function EditarPerfil({ setUser }){
 <div class="field">
   <label class="label">Mensaje Para El Soporte</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
+    <textarea class="textarea" placeholder="Area De Texto"></textarea>
   </div>
 </div>
 
