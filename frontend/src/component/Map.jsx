@@ -1,7 +1,7 @@
 // useRef se usa para acceder a los elementos del DOM directamente en React.
 import React, { useRef } from "react";
 // Componentes utilizados para un mapa y una capa de mosaicos
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, Marker} from "react-leaflet";
 // Estilos de la libreria leaflet
 import "leaflet/dist/leaflet.css";
 import useSwr from "swr";
@@ -12,18 +12,16 @@ const fetcher = (...args) => fetch(...args).then(response => response.json());
 
 
 function Map() {
-    const Mapita = useRef(null); // Crea una referencia al mapa utilizando useRef
-    const Latitud = -38.7372; // Define una constante para la latitud del centro del mapa
-    const Longitud = -72.6006; // Define una constante para la longitud del centro del mapa.
+   
     const url = "https://data.police.uk/api/crimes-street/all-crime? latitud =52.629729& longitud =-1.131592& fecha =2017-01";
-    const {data, error} = useSwr(url, fetcher );
+    const {data, error} = useSwr(url, fetcher);
     const crimes = data && !error ? data.slice(0,100) :  [];
 
 
 
     return (
         // Contenedor de mapa con el centro de coordenadas, un zoom y un tamaño
-        <MapContainer center={[Latitud, Longitud]} zoom={10} ref={Mapita} style={{ height: "450px", width: "100%" }}>
+        <MapContainer center={[52.629729, -1.131592]} zoom={10}  style={{ height: "450px", width: "100%" }}>
             {/* Capa de mosaicos */}
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -31,7 +29,7 @@ function Map() {
             />
 
 
-            {crimes.map(crime => <Marker key={crime.id} position={[crime.location.Latitude, crime.location.Longitude]} />)}
+            {crimes.map(crime => <Marker key={crime.id} position={[crime.location.Latitud, crime.location.Longitud]} />)}
         </MapContainer>
     );
 };
