@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { FcShop } from "react-icons/fc";
+import { FcShop, FcDecision } from "react-icons/fc";
 
 function Index() {
     return (
@@ -26,7 +26,7 @@ function Index() {
 
                         {/* Y la segunda el origen de esta */}
                         <div className="column is-6">
-                            <h1 className="title has-text-black">¿Cómo nace Proxipyme?</h1>
+                            <h1 className="title has-text-black"> <FcDecision style={{fontSize: "80px"}}/> ¿Cómo nace Proxipyme?</h1>
                             <aside className="is-medium menu">
                                 <p className="menu-label has-text-black">Proxipyme surge tras un análisis sobre las limitaciones que tienen las pymes
                                     debido a su dependencia en las redes sociales, lo que limita su visibilidad y exposición al público objetivo</p>
@@ -47,7 +47,7 @@ function Index() {
                 <hr className="has-background-danger" />
 
                 {/* Indica el titulo del nuevo contenido */}
-                <h1 className="title has-text-black">Únete a nosotros</h1>
+                <h1 className="title has-text-black">¡Únete a nosotros!</h1>
                 {/* Se crea un nuevo contenedor que igualmente se divide en dos partes iguales */}
                 <div className="container column is-12">
                     <div className="columns">
