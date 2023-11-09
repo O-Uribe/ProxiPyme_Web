@@ -20,7 +20,7 @@ function Index() {
                             {/* Se hace uso de aside con un tamaño mediano para mostrar contenido relacionado a la pagina */}
                             <aside className="is-medium menu">
                                 <p className="menu-label has-text-black">Una plataforma que aborda problemáticas presentes para que las pymes
-                                    puedan destacar en el mercado digital, proporcionando oportunidades de crecimiento y visibilidad </p>
+                                    puedan destacar en el mercado digital, proporcionando oportunidades de crecimiento y visibilidad.</p>
                             </aside>
                         </div>
 
@@ -29,7 +29,7 @@ function Index() {
                             <h1 className="title has-text-black"> <FcDecision style={{fontSize: "80px"}}/> ¿Cómo nace Proxipyme?</h1>
                             <aside className="is-medium menu">
                                 <p className="menu-label has-text-black">Proxipyme surge tras un análisis sobre las limitaciones que tienen las pymes
-                                    debido a su dependencia en las redes sociales, lo que limita su visibilidad y exposición al público objetivo</p>
+                                    debido a su dependencia en las redes sociales, lo que limita su visibilidad y exposición al público objetivo.</p>
                             </aside>
                         </div>
                     </div>
