@@ -9,7 +9,7 @@ function Navbar() {
                 <div className="columns">
                     {/* La primeras 2 columnas se utilizan para el logo de la pagina */}
                     <div className="navbar-brand column is-2"><br />
-                        <img src="https://cdn.discordapp.com/attachments/1137875950982406215/1163870239914733638/proxi.png?ex=655cd520&is=654a6020&hm=282e101ffa8e9b6f60264c53584cb68d627d949f6ce4ea0bf430de9b06ad49a5&" width="300" alt="Logo" />
+                        <img src="https://cdn.discordapp.com/attachments/1137875950982406215/1163870239914733638/proxi.png?ex=655cd520&is=654a6020&hm=282e101ffa8e9b6f60264c53584cb68d627d949f6ce4ea0bf430de9b06ad49a5&" width="300" alt="Logo"/>
                     </div>
 
                     {/* Las siguientes 8 para mostrar un titulo de bienvenida */}
