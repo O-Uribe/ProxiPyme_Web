@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { FcShop } from "react-icons/fc";
 
 function Index() {
     return (
@@ -15,7 +16,7 @@ function Index() {
                     <div className="columns">
                         {/* La primera columna muestra informacion sobre la plataforma */}
                         <div className="column is-6">
-                            <h1 className="title has-text-black">¿Qué es Proxipyme?</h1>
+                            <h1 className="title has-text-black"> <FcShop/> ¿Qué es Proxipyme?</h1>
                             {/* Se hace uso de aside con un tamaño mediano para mostrar contenido relacionado a la pagina */}
                             <aside className="is-medium menu">
                                 <p className="menu-label has-text-black">Una plataforma que aborda problemáticas presentes para que las pymes
