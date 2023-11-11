@@ -39,14 +39,14 @@ export function EditarPerfil({ setUser }){
               
 
 <div class="field">
-  <label class="label">Nombre</label>
+  <label class="label">Cambio De Nombre</label>
   <div class="control">
     <input class="input" type="text" placeholder="Nombre Completo"/>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Nombre De Usuario</label>
+  <label class="label">Cambio De Nombre De Usuario</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="text" placeholder=""/>
     <span class="icon is-small is-left">
@@ -60,7 +60,25 @@ export function EditarPerfil({ setUser }){
 </div>
 
 <div class="field">
-  <label class="label">Email</label>
+  <label class="label">Cambio De Contraseña</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-success" type="text" placeholder=""/>
+    <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </div>
+  <p class="help is-success">Permitido</p>
+</div>
+
+
+
+
+
+<div class="field">
+  <label class="label">Cambio De Correo Electronico</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-danger" type="email" placeholder=""/>
     <span class="icon is-small is-left">
@@ -101,18 +119,7 @@ export function EditarPerfil({ setUser }){
   </div>
 </div>
 
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question"/>
-      Si
-    </label>
-    <label class="radio">
-      <input type="radio" name="question"/>
-      No
-    </label>
-  </div>
-</div>
+
 
 <div class="field is-grouped">
   <div class="control">
