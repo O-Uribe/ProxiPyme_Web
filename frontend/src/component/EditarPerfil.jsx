@@ -30,24 +30,7 @@ export function EditarPerfil({ setUser }){
       <section>
           <h1 class="title"><FcBusinessman style={{fontSize: "100px"}}/>Editar Perfil</h1>
       
-          <form 
-          className="formulario"
-          onSubmit={handleSubmit}
-          >
-      
-               
-               <input 
-               type="text" 
-               value={nombre}
-               onChange={e => setNombre(e.target.value)}
-               />
-      
-      
-               <input 
-               type="password" 
-               value={contraseña}
-               onChange={e => setContraseña(e.target.value)}
-               />
+         
 
 <div class="field">
   <label class="label">Nombre</label>
