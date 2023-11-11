@@ -114,7 +114,7 @@ export function EditarPerfil({ setUser }){
   <div class="control">
     <label class="checkbox">
       <input type="checkbox"/>
-      De Acuerdo Con Los <a href="#">Terminos y Condiciones</a>
+      De Acuerdo Con Los <a href="#">Terminos y Condiciones.</a>
     </label>
   </div>
 </div>
