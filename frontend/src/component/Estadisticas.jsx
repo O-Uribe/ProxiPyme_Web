@@ -3,7 +3,7 @@ import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 import { Tabla } from "./Tabla";
 import { Grafico } from "./Grafico";
-
+import { FcPositiveDynamic } from "react-icons/fc";
 function Estadisticas() {
     return (
         <div className="container">
@@ -23,7 +23,7 @@ function Estadisticas() {
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
-                    <h3 className="title">Estadísticas</h3>
+                    <h3 className="title"><FcPositiveDynamic style={{fontSize: "60px"}}/>Estadísticas</h3>
                     <Tabla/>
                     <Grafico/>
                 </div>
