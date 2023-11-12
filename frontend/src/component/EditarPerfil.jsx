@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react"
 import 'bulma/css/bulma.min.css';
-import { FcBusinessman, FcBusinesswoman } from "react-icons/fc";
+import { FcBusinessman, FcBusinesswoman, FcServices, FcCustomerSupport } from "react-icons/fc";
 
 export function EditarPerfil({ setUser }){
 
@@ -28,7 +28,7 @@ export function EditarPerfil({ setUser }){
           return(
       
       <section>
-          <h1 class="title"><FcBusinesswoman style={{fontSize: "100px"}}/><FcBusinessman style={{fontSize: "100px"}}/>Editar Perfil</h1>
+          <h1 class="title">Editar Perfil<FcBusinessman style={{fontSize: "100px"}}/><FcBusinesswoman style={{fontSize: "100px"}}/></h1>
       
           <form 
           className="formulario"
@@ -38,12 +38,7 @@ export function EditarPerfil({ setUser }){
                
               
 
-<div class="field">
-  <label class="label">Cambio De Nombre</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Nombre Completo"/>
-  </div>
-</div>
+
 
 <div class="field">
   <label class="label">Cambio De Nombre De Usuario</label>
@@ -56,7 +51,7 @@ export function EditarPerfil({ setUser }){
       <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-success">Permitido</p>
+  <p class="help is-success">Disponible</p>
 </div>
 
 <div class="field">
@@ -70,7 +65,7 @@ export function EditarPerfil({ setUser }){
       <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-success">Permitido</p>
+  <p class="help is-success">Disponible</p>
 </div>
 
 
@@ -80,19 +75,19 @@ export function EditarPerfil({ setUser }){
 <div class="field">
   <label class="label">Cambio De Correo Electronico</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder=""/>
+    <input class="input is-success" type="email" placeholder=""/>
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
+      <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-danger">No Disponible</p>
+  <p class="help is-success">Disponible</p>
 </div>
 
 <div class="field">
-  <label class="label">Mas Herramientas</label>
+  <label class="label">Mas Herramientas.<FcServices style={{fontSize: "30px"}}/></label>
   <div class="control">
     <div class="select">
       <select>
@@ -104,7 +99,7 @@ export function EditarPerfil({ setUser }){
 </div>
 
 <div class="field">
-  <label class="label">Mensaje Para El Soporte</label>
+  <label class="label">Mensaje Para El Soporte.<FcCustomerSupport style={{fontSize: "30px"}}/></label>
   <div class="control">
     <textarea class="textarea" placeholder="Area De Texto"></textarea>
   </div>
