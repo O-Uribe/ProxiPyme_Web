@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react"
 import 'bulma/css/bulma.min.css';
-import { FcBusinessman } from "react-icons/fc";
+import { FcBusinessman, FcBusinesswoman } from "react-icons/fc";
 
 export function EditarPerfil({ setUser }){
 
@@ -28,7 +28,7 @@ export function EditarPerfil({ setUser }){
           return(
       
       <section>
-          <h1 class="title"><FcBusinessman style={{fontSize: "100px"}}/>Editar Perfil</h1>
+          <h1 class="title"><FcBusinesswoman style={{fontSize: "100px"}}/><FcBusinessman style={{fontSize: "100px"}}/>Editar Perfil</h1>
       
           <form 
           className="formulario"
