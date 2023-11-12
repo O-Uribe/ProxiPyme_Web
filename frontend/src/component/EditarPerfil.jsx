@@ -41,7 +41,7 @@ export function EditarPerfil({ setUser }){
 
 
 <div class="field">
-  <label class="label">Cambio De Nombre De Usuario</label>
+  <label class="label">Cambio De Nombre De Usuario.</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="text" placeholder=""/>
     <span class="icon is-small is-left">
@@ -55,7 +55,7 @@ export function EditarPerfil({ setUser }){
 </div>
 
 <div class="field">
-  <label class="label">Cambio De Contraseña</label>
+  <label class="label">Cambio De Contraseña.</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="text" placeholder=""/>
     <span class="icon is-small is-left">
@@ -73,7 +73,7 @@ export function EditarPerfil({ setUser }){
 
 
 <div class="field">
-  <label class="label">Cambio De Correo Electronico</label>
+  <label class="label">Cambio De Correo Electronico.</label>
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="email" placeholder=""/>
     <span class="icon is-small is-left">

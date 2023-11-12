@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FcCollaboration, FcGoogle, FcPhoneAndroid, FcStatistics } from "react-icons/fc";
 function Footer() {
     return (
         <div className="container">
@@ -14,7 +14,9 @@ function Footer() {
                 {/* Se crea una columna que ocupara las restantes y se centra el texto horizontalmente */}
                 <div className="column has-text-center">
                     <h1 className="title has-text-black">Proxipyme te está esperando</h1><br />
+                    <FcCollaboration style={{fontSize: "100px"}}/>
                     <h1 className="title has-text-black">¿Qué esperas para unirte?</h1>
+                    <FcGoogle style={{fontSize: "50px"}}/><FcPhoneAndroid style={{fontSize: "50px"}}/><FcStatistics style={{fontSize: "50px"}}/>
                 </div>
 
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
