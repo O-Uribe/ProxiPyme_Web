@@ -1,64 +1,58 @@
-// Este archivo remplaza el del jose, solamente la conexion con el backend
-import "../style/Login.css";
-import { useState } from "react";
-import { FcShop } from "react-icons/fc";
+import React from "react";
 
-import { registrerRecuest, loginRequest } from "../api/auth";
-
-export function Formulario({ setUser }) {
-    const [Nombre_Usuario, setNombre] = useState("");
-    const [Contrase, setContraseña] = useState("");
-    const [error, setError] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        if (Nombre_Usuario == "" || Contrase == "") {
-            setError(true);
-            return;
-        }
-        setError(false);
-
-        //____________ IMPORTANTE ____________\\
-        // Enviamos datos a el backend por api.
-        try {
-            const user = { Nombre_Usuario, Contrase };
-            // console.log(user);
-            const response = await loginRequest(user);
-            // console.log(response);
-        } catch (error) {
-            // TIPOS DE ERRORES
-            if (error.response) {
-                console.error("Respuesta del servidor:", error.response.data);
-            } else if (error.request) {
-                console.error("No se pudo conectar al servidor.");
-            } else {
-                console.error("Error desconocido:", error.message);
-            }
-        }
-    };
-
+function Login() {
     return (
-        <section>
-            <h1 className="title">Login</h1>
+        //Crea el contenedor principal de la pagina
+        <div className="container">
+            <section className="hero">
+                {/* Se crea una caja con un fondo rosa claro */}
+                <div className="hero-body box has-background-danger-light">
+                    {/* Crea un nuevo container y centra el contenido horizontalmente */}
+                    <div className="container has-text-centered">
+                        {/* Configura un estilo de columna */}
+                        <div className="column is-10 is-offset-1">
+                            {/* Da un estilo de color negro al titulo */}
+                            <h3 className="title has-text-black">
+                                Inicia sesión
+                            </h3>
+                            {/* Crea una linea rosa que separa el titulo del formulario */}
+                            <hr className="login-hr has-background-danger" />
 
-            <form className="formulario" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={Nombre_Usuario}
-                    onChange={(e) => setNombre(e.target.value)}
-                />
-                <input
-                    type="password"
-                    value={Contrase}
-                    onChange={(e) => setContraseña(e.target.value)}
-                />
-                <button className="button is-link is-rounded">
-                    Iniciar Sesion
-                </button>
-            </form>
+                            {/* Crea una caja que contiene al formulario */}
+                            <div className="box">
+                                <form>
+                                    {/* Crea el campo para el Nombre de usuario, e indica que es un campo obligatorio */}
+                                    <div className="field">
+                                        <input
+                                            className="input"
+                                            type="text"
+                                            placeholder="Ingresa tu nombre de usuario"
+                                            required
+                                        />
+                                    </div>
 
-            {error && <p>Todos los campos son obligatorios.</p>}
-        </section>
+                                    {/* Crea el campo para la contraseña, e indica que es un campo obligatorio */}
+                                    <div className="field">
+                                        <input
+                                            className="input"
+                                            type="password"
+                                            placeholder="Ingresa tu contraseña"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Crea el boton para registro, aplicando estilos de texto blanco, que ocupe todo el ancho disponible y un color de fondo rosa*/}
+                                    <button className="button has-text-white is-fullwidth has-background-danger">
+                                        Login
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 }
+
+export default Login;
