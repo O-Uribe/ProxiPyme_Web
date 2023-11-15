@@ -2,11 +2,19 @@ import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema(
     {
-        title: {
+        empresa: {
             type: String,
             required: true,
         },
-        description: {
+        categoria: {
+            type: String,
+            required: true,
+        },
+        descripcion: {
+            type: String,
+            required: true,
+        },
+        ciudad: {
             type: String,
             required: true,
         },
