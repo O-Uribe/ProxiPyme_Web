@@ -6,17 +6,17 @@ import DataTable from "react-data-table-component";
 
 const tablaCampeones = [
 
-    { visitas:1, producto:"Sushis rolls", reseña: "Rolls rellenos"  },
-    { visitas:2, producto:"Cafe de grano", reseña: "Cafe colombiano aromatizado" },
-    { visitas:3, producto:"Pescado ahumado", reseña: "Pescado sellado al vacio con aliño" },
-    { visitas:4, producto:"Papas fritas", reseña: "Papas fritas con sal de mar" },
-    { visitas:5, producto:"Bebidas variedades", reseña: "Coca cola, Sprite, Fanta" },
-    { visitas:6, producto:"Muffis", reseña: "Queques de sabores" },
-    { visitas:7, producto:"Empanadas", reseña: "Empanadas rellenas de pollo y queso" },
-    { visitas:8, producto:"Poleron", reseña: "Poleron marca nike, talla M"},
-    { visitas:9, producto:"Calcetines", reseña: "Calcetines de algodon, Talla 40" },
-    { visitas:10, producto:"Guantes", reseña: "Guantes de cuero" },
-    { visitas:11, producto:"Pantalon", reseña: "Pantalon jean skynny fit talla 42"},      
+    { visitas:1, productos:"Sushis rolls", reseñas: "Rolls rellenos"  },
+    { visitas:2, productos:"Cafe de grano", reseñas: "Cafe colombiano aromatizado" },
+    { visitas:3, productos:"Pescado ahumado", reseñas: "Pescado sellado al vacio con aliño" },
+    { visitas:4, productos:"Papas fritas", reseñas: "Papas fritas con sal de mar" },
+    { visitas:5, productos:"Bebidas variedades", reseñas: "Coca cola, Sprite, Fanta" },
+    { visitas:6, productos:"Muffis", reseñas: "Queques de sabores" },
+    { visitas:7, productos:"Empanadas", reseñas: "Empanadas rellenas de pollo y queso" },
+    { visitas:8, productos:"Poleron", reseñas: "Poleron marca nike, talla M"},
+    { visitas:9, productos:"Calcetines", reseñas: "Calcetines de algodon, Talla 40" },
+    { visitas:10, productos:"Guantes", reseñas: "Guantes de cuero" },
+    { visitas:11, productos:"Pantalon", reseñas: "Pantalon jean skynny fit talla 42"},      
 
 
 
