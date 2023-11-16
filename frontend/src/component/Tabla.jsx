@@ -37,15 +37,15 @@ const columnas =  [
     },
    
     {
-        name: "Producto",
-        selector: "producto",
+        name: "Productos",
+        selector: "productos",
         sortable: true
 
     },
 
     {
-        name: "Reseña",
-        selector: "reseña",
+        name: "Reseñas",
+        selector: "reseñas",
         sortable: true
         
     },
