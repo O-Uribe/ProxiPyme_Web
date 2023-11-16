@@ -1,9 +1,47 @@
-import React from "react";
+import { registrerRecuest, loginRequest } from "../api/auth";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
-function Login() {
+export function Login() {
+    const { signin, isAuthenticated, errors: LoginErrors } = useAuth();
+    const navigate = useNavigate();
+
+    // REDIRECCION
+    useEffect(() => {
+        if (isAuthenticated) navigate("/home");
+    }, [isAuthenticated]);
+
+    const [Correo_Electronico, setCorreo] = useState("");
+    const [Contrase, setContraseña] = useState("");
+    const [errors, setErrors] = useState([]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const user = {
+                Correo_Electronico,
+                Contrase,
+            };
+            signin(user);
+        } catch (error) {
+            // TIPOS DE ERRORES //
+            if (error.response) {
+                console.error("Respuesta del servidor:", error.response.data);
+            } else if (error.request) {
+                console.error("No se pudo conectar al servidor.");
+            } else {
+                console.error("Error desconocido:", error.message);
+            }
+        }
+    };
+
     return (
         //Crea el contenedor principal de la pagina
         <div className="container">
+            {LoginErrors.map((error, i) => (
+                <div key={i}>{error}</div>
+            ))}
             <section className="hero">
                 {/* Se crea una caja con un fondo rosa claro */}
                 <div className="hero-body box has-background-danger-light">
@@ -12,21 +50,24 @@ function Login() {
                         {/* Configura un estilo de columna */}
                         <div className="column is-10 is-offset-1">
                             {/* Da un estilo de color negro al titulo */}
-                            <h3 className="title has-text-black">
-                                Inicia sesión
-                            </h3>
+                            <h3 className="title has-text-black">Login</h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
                             <hr className="login-hr has-background-danger" />
 
                             {/* Crea una caja que contiene al formulario */}
                             <div className="box">
-                                <form>
-                                    {/* Crea el campo para el Nombre de usuario, e indica que es un campo obligatorio */}
+                                {/*____________ FORM ____________*/}
+                                <form onSubmit={handleSubmit}>
+                                    {/* Crea el campo para el correo, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type="text"
-                                            placeholder="Ingresa tu nombre de usuario"
+                                            type="email"
+                                            value={Correo_Electronico}
+                                            onChange={(e) =>
+                                                setCorreo(e.target.value)
+                                            }
+                                            placeholder="Ingresa tu correo electronico"
                                             required
                                         />
                                     </div>
@@ -36,6 +77,10 @@ function Login() {
                                         <input
                                             className="input"
                                             type="password"
+                                            value={Contrase}
+                                            onChange={(e) =>
+                                                setContraseña(e.target.value)
+                                            }
                                             placeholder="Ingresa tu contraseña"
                                             required
                                         />
@@ -46,6 +91,10 @@ function Login() {
                                         Login
                                     </button>
                                 </form>
+                                <p>
+                                    No tienes una cuenta aun?
+                                    <Link to="/register">Registrate</Link>
+                                </p>
                             </div>
                         </div>
                     </div>

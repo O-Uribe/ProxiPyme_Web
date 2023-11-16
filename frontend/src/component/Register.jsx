@@ -1,50 +1,48 @@
-import React from "react";
-// import { registrerRecuest, loginRequest } from "../api/auth";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export function Register({ setUser }) {
-    // const [Nombre_Usuario, setNombre] = useState("");
-    // const [Nombres, setNomApell] = useState("");
-    // const [Correo_Electronico, setCorreo] = useState("");
-    // const [Contrase, setContraseña] = useState("");
-    // const [error, setError] = useState(false);
+    const { signup, isAuthenticated, errors: RegisterErrors } = useAuth();
+    const navigate = useNavigate();
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
+    // REDIRECCION
+    useEffect(() => {
+        if (isAuthenticated) navigate("/home");
+    }, [isAuthenticated]);
 
-    //     if (
-    //         Nombre_Usuario == "" ||
-    //         Nombres == "" ||
-    //         Correo_Electronico == "" ||
-    //         Contrase == ""
-    //     ) {
-    //         setError(true);
-    //         return;
-    //     }
-    //     setError(false);
+    const [Nombre_Usuario, setNombre] = useState("");
+    const [Correo_Electronico, setCorreo] = useState("");
+    const [Contrase, setContraseña] = useState("");
+    // const [error, setError] = useState([]);
 
-    //     try {
-    //         const user = {
-    //             Nombre_Usuario,
-    //             Nombres,
-    //             Correo_Electronico,
-    //             Contrase,
-    //         };
-    //         const response = await registrerRecuest(user);
-    //     } catch (error) {
-    //         // TIPOS DE ERRORES //
-    //         if (error.response) {
-    //             console.error("Respuesta del servidor:", error.response.data);
-    //         } else if (error.request) {
-    //             console.error("No se pudo conectar al servidor.");
-    //         } else {
-    //             console.error("Error desconocido:", error.message);
-    //         }
-    //     }
-    // };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const user = {
+                Nombre_Usuario,
+                Correo_Electronico,
+                Contrase,
+            };
+            signup(user); // AuthContext
+            // TIPOS DE ERRORES //
+        } catch (error) {
+            if (error.response) {
+                console.error("Respuesta del servidor:", error.response.data);
+            } else if (error.request) {
+                console.error("No se pudo conectar al servidor.");
+            } else {
+                console.error("Error desconocido:", error.message);
+            }
+        }
+    };
 
     return (
         //Crea el contenedor principal de la pagina
         <div className="container">
+            {RegisterErrors.map((error, i) => (
+                <div key={i}>{error}</div>
+            ))}
             <section className="hero">
                 {/* Se crea una caja con un fondo rosa claro */}
                 <div className="hero-body box has-background-danger-light">
@@ -73,20 +71,6 @@ export function Register({ setUser }) {
                                                 setNombre(e.target.value)
                                             }
                                             placeholder="Ingresa tu nombre de usuario"
-                                            required
-                                        />
-                                    </div>
-
-                                    {/* Crea el campo para el Nombre de usuario, e indica que es un campo obligatorio */}
-                                    <div className="field">
-                                        <input
-                                            className="input"
-                                            type="text"
-                                            value={Nombres}
-                                            onChange={(e) =>
-                                                setNomApell(e.target.value)
-                                            }
-                                            placeholder="Ingresa tu nombre y apellido"
                                             required
                                         />
                                     </div>
@@ -133,6 +117,10 @@ export function Register({ setUser }) {
                                         Registrarme
                                     </button>
                                 </form>
+                                <p>
+                                    Ya tienes una cuenta?
+                                    <Link to="/login">Login</Link>
+                                </p>
                             </div>
                         </div>
                     </div>
