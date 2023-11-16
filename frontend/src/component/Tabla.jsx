@@ -63,7 +63,6 @@ return (
     <DataTable
     columns={columnas}
     data={tablaCampeones}
-    title="Dashboard"
     pagination
     fixedHeader
     fixedHeaderScrollHeight="600px"
