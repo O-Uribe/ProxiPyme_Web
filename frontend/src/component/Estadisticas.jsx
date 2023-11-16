@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bulma/css/bulma.min.css';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 import { Tabla } from "./Tabla";
@@ -23,7 +24,7 @@ function Estadisticas() {
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
-                    <h3 className="title"><FcPositiveDynamic style={{fontSize: "60px"}}/>Estadísticas</h3>
+                <FcPositiveDynamic style={{fontSize: "50px"}}/><h3 class="tag is-black is-large is-rounded">Estadísticas</h3>
                     <Tabla/>
                     <Grafico/>
                 </div>
