@@ -1,5 +1,10 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import { registrerRecuest, loginRequest } from "../api/auth";
+import {
+    registrerRecuest,
+    registrerRecuestPyme,
+    loginRequest,
+    loginRequestPyme,
+} from "../api/auth";
 
 export const AuthContext = createContext();
 
@@ -23,6 +28,20 @@ export const AuthProvider = ({ children }) => {
             console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
+            localStorage.setItem("id", response.data.id);
+        } catch (error) {
+            // console.log(error.response);
+            setErrors(error.response.data);
+        }
+    };
+    const signupPyme = async (user) => {
+        try {
+            const response = await registrerRecuestPyme(user);
+            console.log(response.data);
+            setUser(response.data);
+            setIsAuthenticated(true);
+            localStorage.setItem("id", response.data.id);
+            // localStorage.setItem("id", response.data.token);
         } catch (error) {
             // console.log(error.response);
             setErrors(error.response.data);
@@ -34,6 +53,23 @@ export const AuthProvider = ({ children }) => {
             console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
+            localStorage.setItem("id", response.data.id);
+        } catch (error) {
+            // console.log(error.response);
+            if (Array.isArray(error.response.data)) {
+                return setErrors(error.response.data);
+            }
+            setErrors([error.response.data.message]);
+        }
+    };
+
+    const signinPyme = async (user) => {
+        try {
+            const response = await loginRequestPyme(user);
+            console.log(response.data);
+            setUser(response.data);
+            setIsAuthenticated(true);
+            localStorage.setItem("id", response.data.id);
         } catch (error) {
             // console.log(error.response);
             if (Array.isArray(error.response.data)) {
@@ -55,7 +91,9 @@ export const AuthProvider = ({ children }) => {
         <AuthContext.Provider
             value={{
                 signup,
+                signupPyme,
                 signin,
+                signinPyme,
                 user,
                 isAuthenticated,
                 errors,

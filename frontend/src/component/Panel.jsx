@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { EditarPerfil } from "./EditarPerfil";
 
 function Panel() {
@@ -12,24 +12,42 @@ function Panel() {
                     {/* Se crean div para poder centrar y agregar margenes a cada elemento dentro del navbar */}
                     {/* Cada "a" crea un enlace a una ruta especifica con su respectivo icono */}
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/perfil'><i className="far fa-user"></i> Mi Perfil</a>
+                        <a className="has-text-danger-light" href="/perfil">
+                            <i className="far fa-user"></i> Mi Perfil
+                        </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/EditarPerfil'><i className="far fa-edit"></i> Editar Perfil</a>
+                        <a
+                            className="has-text-danger-light"
+                            href="/EditarPerfil">
+                            <i className="far fa-edit"></i> Editar Perfil
+                        </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/reportarP'><i className="far fa-flag"></i> Reportar Problema</a>
+                        <a className="has-text-danger-light" href="/reportarP">
+                            <i className="far fa-flag"></i> Reportar Problema
+                        </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/ayuda'><i className="far fa-question-circle"></i> Ayuda</a>
+                        <a className="has-text-danger-light" href="/ayuda">
+                            <i className="far fa-question-circle"></i> Ayuda
+                        </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href='/'><i className="fas fa-arrow-right"></i> Cerrar Sesión</a>
+                        <a
+                            className="has-text-danger-light"
+                            href="/"
+                            onClick={() => {
+                                localStorage.clear();
+                                // Aquí puedes agregar cualquier otra lógica que necesites cuando el usuario cierra sesión
+                            }}>
+                            <i className="fas fa-arrow-right"></i> Cerrar Sesión
+                        </a>
                     </div>
                 </div>
             </section>
         </div>
-    )
+    );
 }
 
-export default Panel
+export default Panel;

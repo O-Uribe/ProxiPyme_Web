@@ -1,39 +1,40 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const pymeSchema = new mongoose.Schema(
     {
         tipoUsuario: {
             type: String,
             required: true,
             trim: true,
         },
-        primerNombre: {
+        nombrePyme: {
             type: String,
             required: true,
             trim: true,
         },
-        primerApellido: {
+        direccionPyme: {
             type: String,
             required: true,
             trim: true,
         },
-        Nombre_Usuario: {
+        encargadoPyme: {
             type: String,
             required: true,
             trim: true,
         },
-        Correo_Electronico: {
+        categoria: {
             type: String,
             required: true,
             trim: true,
-            unique: true,
+        },
+        descripcionPyme: {
+            type: String,
+            required: true,
+            trim: true,
         },
         Contrase: {
             type: String,
             required: true,
-        },
-        Detalles_Perfil: {
-            type: String,
         },
     },
     {
@@ -41,4 +42,4 @@ const userSchema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model("Pymes", pymeSchema);

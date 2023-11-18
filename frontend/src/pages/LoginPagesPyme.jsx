@@ -3,25 +3,25 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useRedirectIfAuthenticated } from "../context/Autenticacion";
 
-export function Login() {
-    const { signin, isAuthenticated, errors: LoginErrors } = useAuth();
+export function LoginPyme() {
+    const { signinPyme, isAuthenticated, errors: LoginErrors } = useAuth();
     // const navigate = useNavigate();
 
     // REDIRECCION
     useRedirectIfAuthenticated(isAuthenticated, "/home");
 
-    const [Correo_Electronico, setCorreo] = useState("");
+    const [nombrePyme, setCorreo] = useState("");
     const [Contrase, setContraseña] = useState("");
     const [errors, setErrors] = useState([]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const user = {
-                Correo_Electronico,
+            const pyme = {
+                nombrePyme,
                 Contrase,
             };
-            signin(user);
+            signinPyme(pyme);
         } catch (error) {
             // TIPOS DE ERRORES //
             if (error.response) {
@@ -60,8 +60,8 @@ export function Login() {
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type="email"
-                                            value={Correo_Electronico}
+                                            type="text"
+                                            value={nombrePyme}
                                             onChange={(e) =>
                                                 setCorreo(e.target.value)
                                             }
@@ -102,4 +102,4 @@ export function Login() {
     );
 }
 
-export default Login;
+export default LoginPyme;

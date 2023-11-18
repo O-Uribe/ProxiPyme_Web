@@ -12,7 +12,7 @@ import {
 const router = Router();
 
 router.get("/tasks", getTasks);
-router.get("/tasks/:id", authRequired, getTask);
+router.get("/tasks/:id", getTask);
 router.post("/tasks", authRequired, createTasks);
 router.delete("/tasks/:id", authRequired, deleteTasks);
 router.put("/tasks/:id", authRequired, updateTasks);
