@@ -1,11 +1,11 @@
 import React from 'react';
 import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
-
+import MapView from './MapView';
 
 
 function Mapa() {
-    return (
+    return ( 
         <div className="container">
             {/* Se importa el componente Navbar correspondiente a la barra de navegacion */}
             <NavPrin></NavPrin>
@@ -24,10 +24,12 @@ function Mapa() {
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
                     <h3 className="title">Mapa con pymes</h3>
-                </div>
+                </div><br />
 
                 {/* Se importa el componente mapa */}
-               
+                <div className="container">
+                    <MapView></MapView>
+                </div> <br />
 
             </section>
             {/* Se importa el componente Footer correspondiente al pie de pagina */}

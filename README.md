@@ -8,7 +8,7 @@ npm install
 
 librerias que se suman:
 
-Barckend
+Backend
 
 ```bash
 npm i mongobd cors mongoose morgan bcryptjs jsonwebtoken cookie-parser zod
@@ -19,5 +19,5 @@ npm i mongobd cors mongoose morgan bcryptjs jsonwebtoken cookie-parser zod
 Front
 
 ```bash
-npm i bulma react-icons lightweight-charts leaflet axios react-hook-form react-router-dom bootstrap react-data-table-component
+npm i bulma react-icons lightweight-charts leaflet axios react-hook-form react-router-dom bootstrap react-data-table-component react-switch
 ```

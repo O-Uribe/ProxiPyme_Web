@@ -11,7 +11,7 @@ function ProtectedRouter() {
     console.log(id);
     // console.log(user, isAuthenticated);
 
-    if (!id) return <Navigate to="/login" replace />;
+    if (!id) return <Navigate to="/loginPyme" replace />;
 
     return <Outlet />;
 }
