@@ -13,7 +13,9 @@ import Estadisticas from "./component/Estadisticas";
 import Mapa from "./component/Mapa";
 import PPyme from "./component/PerfilPyme";
 import EditarPerfil from "./component/EditarPerfil";
+import PerfilUsuario from "./component/PerfilUsuario";
 import { AuthProvider } from "./context/AuthContext";
+
 
 import ProtectedRouter from "./ProtectedRouter";
 
@@ -41,6 +43,7 @@ function App() {
                         <Route path="/mapa" element={<Mapa />} />
                         <Route path="/favoritos" element={<Favoritos />} />
                         <Route path="/perfil" element={<PPyme />} />
+                        <Route path="/perfilusuario" element={<PerfilUsuario />} />
                         <Route
                             path="/editarperfil"
                             element={<EditarPerfil />}
