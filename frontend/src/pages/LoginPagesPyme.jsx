@@ -75,7 +75,11 @@ export function LoginPyme() {
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type={MostrarContra ? "text" : "password"}
+                                            type={
+                                                MostrarContra
+                                                    ? "text"
+                                                    : "password"
+                                            }
                                             value={Contrase}
                                             onChange={(e) =>
                                                 setContraseña(e.target.value)
@@ -84,9 +88,17 @@ export function LoginPyme() {
                                             required
                                         />
                                         {/* Boton para mostrar u ocultar contraseña */}
-                                        <button className="button" onClick={() => setMostrarContra(!MostrarContra)}>
-                                            {MostrarContra ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
-                                        </button>
+                                        <p
+                                            className="button"
+                                            onClick={() =>
+                                                setMostrarContra(!MostrarContra)
+                                            }>
+                                            {MostrarContra ? (
+                                                <i className="fas fa-eye-slash"></i>
+                                            ) : (
+                                                <i className="fas fa-eye"></i>
+                                            )}
+                                        </p>
                                     </div>
 
                                     {/* Crea el boton para registro, aplicando estilos de texto blanco, que ocupe todo el ancho disponible y un color de fondo rosa*/}
@@ -95,8 +107,12 @@ export function LoginPyme() {
                                     </button>
                                 </form>
                                 <p>
-                                    ¿No tienes una cuenta aun? 
-                                    <Link to="/registerPyme" className="has-text-danger">Registrate</Link>
+                                    ¿No tienes una cuenta aun?
+                                    <Link
+                                        to="/registerPyme"
+                                        className="has-text-danger">
+                                        Registrate
+                                    </Link>
                                 </p>
                             </div>
                         </div>

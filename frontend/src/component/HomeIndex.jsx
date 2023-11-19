@@ -1,7 +1,82 @@
-import React from 'react';
-import NavPrin from './NavbarPrincipal';
-import Footer from './FooterPrincipal';
+import React from "react";
+import NavPrin from "./NavbarPrincipal";
+import Footer from "./FooterPrincipal";
 
+const pymes = [
+    {
+        nombrePyme: "Pyme 1",
+        categoria: "Categoría 1",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 2",
+        categoria: "Categoría 2",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    {
+        nombrePyme: "Pyme 3",
+        categoria: "Categoría 3",
+        url_img:
+            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
+    },
+    // Agrega más objetos según sea necesario
+];
 
 function HomeIndex() {
     return (
@@ -24,12 +99,46 @@ function HomeIndex() {
                 <div className="container has-text-black">
                     <h3 className="title">Pymes recomendadas para ti</h3>
                 </div>
+                {/* Agrega la sección de imágenes */}
+                <div className="container">
+                    <div
+                        style={{
+                            // width: "900px",
+                            // height: "300px",
+                            // borderRadius: "20%",
+                            overflow: "auto",
+                            backgroundColor: "#ffffff",
+                            display: "flex",
+                            flexDirection: "row",
+                            whiteSpace: "nowrap",
+                        }}>
+                        {pymes.map((pyme) => (
+                            <div
+                                style={{
+                                    width: "200px",
+                                    // height: "200px",
+                                    margin: "10px",
+                                }}>
+                                <img
+                                    src={pyme.url_img}
+                                    alt={pyme.nombrePyme}
+                                    style={{
+                                        // width: "200px",
+                                        height: "100px",
+                                        borderRadius: "4%",
+                                    }}
+                                />
+                                <p>{pyme.nombrePyme}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
 
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
         </div>
-    )
+    );
 }
 
-export default HomeIndex
+export default HomeIndex;
