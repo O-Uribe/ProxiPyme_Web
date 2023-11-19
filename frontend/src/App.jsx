@@ -36,18 +36,12 @@ function App() {
 
                     <Route element={<ProtectedRouter />}>
                         <Route path="/home" element={<HomeIndex />} />
-                        <Route
-                            path="/estadisticas"
-                            element={<Estadisticas />}
-                        />
+                        <Route path="/estadisticas" element={<Estadisticas />}/>
                         <Route path="/mapa" element={<Mapa />} />
                         <Route path="/favoritos" element={<Favoritos />} />
                         <Route path="/perfil" element={<PPyme />} />
                         <Route path="/perfilusuario" element={<PerfilUsuario />} />
-                        <Route
-                            path="/editarperfil"
-                            element={<EditarPerfil />}
-                        />
+                        <Route path="/editarperfil" element={<EditarPerfil />} />
                     </Route>
                 </Routes>
             </Router>

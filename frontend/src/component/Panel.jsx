@@ -1,7 +1,9 @@
-import React from "react";
-import { EditarPerfil } from "./EditarPerfil";
+import React, { useState } from "react";
+import Ayuda from "./Ayuda";
 
 function Panel() {
+    const [Abierto, setAbierto] = useState(false);
+
     return (
         <div className="container">
             {/* Se crea una seccion para de color rosa */}
@@ -19,7 +21,7 @@ function Panel() {
                     <div className="column has-text-centered my-4">
                         <a
                             className="has-text-danger-light"
-                            href="/EditarPerfil">
+                            href="/editarperfil">
                             <i className="far fa-edit"></i> Editar Perfil
                         </a>
                     </div>
@@ -29,8 +31,8 @@ function Panel() {
                         </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href="/ayuda">
-                            <i className="far fa-question-circle"></i> Ayuda
+                        <a className="has-text-danger-light" onClick={() => setAbierto(true)}>
+                            <i className="far fa-question-circle"></i> <Ayuda Abierto={Abierto} setAbierto={setAbierto}></Ayuda> Ayuda
                         </a>
                     </div>
                     <div className="column has-text-centered my-4">
