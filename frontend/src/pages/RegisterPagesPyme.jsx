@@ -18,6 +18,7 @@ export function RegisterPyme() {
         if (isAuthenticated) navigate("/home");
     }, [isAuthenticated]);
 
+    const [MostrarContra, setMostrarContra] = useState(false);
     const [Contrase, setContraseña] = useState("");
     const [nombrePyme, setNombrePyme] = useState("");
     const [direccionPyme, setDireccionPyme] = useState("");
@@ -144,7 +145,7 @@ export function RegisterPyme() {
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type="password"
+                                            type={MostrarContra ? "text" : "password"}
                                             value={Contrase}
                                             onChange={(e) =>
                                                 setContraseña(e.target.value)
@@ -152,12 +153,16 @@ export function RegisterPyme() {
                                             placeholder="Contraseña"
                                             required
                                         />
+                                        {/* Boton para mostrar u ocultar contraseña */}
+                                        <button className="button" onClick={() => setMostrarContra(!MostrarContra)}>
+                                            {MostrarContra ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
+                                        </button>
                                     </div>
 
                                     {/* USUARIO O PYME */}
                                     <div className="field">
                                         <label className="checkbox">
-                                            <span>Usuario o Pyme</span>
+                                            <span>¿Registrar como Pyme? </span>
                                             <Switch
                                                 onChange={handleChange}
                                                 checked={esUsuarioNormal}
@@ -171,8 +176,8 @@ export function RegisterPyme() {
                                     </button>
                                 </form>
                                 <p>
-                                    Ya tienes una cuenta?
-                                    <Link to="/login">Login</Link>
+                                    ¿Ya tienes una cuenta? 
+                                    <Link to="/login" className="has-text-danger">Login</Link>
                                 </p>
                             </div>
                         </div>
