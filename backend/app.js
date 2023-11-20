@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
+import pymeRoutes from "./routes/pyme.routes.js";
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(cookieParser());
 
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
+app.use("/api", pymeRoutes);
 
 export default app;

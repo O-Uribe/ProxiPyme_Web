@@ -9,21 +9,21 @@ import {
 } from "react-icons/fc";
 
 export function EditarPerfil({ setUser }) {
-    // const [nombre, setNombre] = useState("");
-    // const [contraseña, setContraseña] = useState("");
-    // const [error, setError] = useState(false);
+    const [nombre, setNombre] = useState("");
+    const [contraseña, setContraseña] = useState("");
+    const [error, setError] = useState(false);
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    //     if (nombre == "" || contraseña == "") {
-    //         setError(true);
-    //         return;
-    //     }
-    //     setError(false);
+        if (nombre == "" || contraseña == "") {
+            setError(true);
+            return;
+        }
+        setError(false);
 
-    //     setUser([nombre]);
-    // };
+        setUser([nombre]);
+    };
 
     return (
         <section>

@@ -23,9 +23,9 @@ export function RegisterPyme() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const tipoUsuario = esUsuarioNormal ? "cliente" : "pyme";
+            // const tipoUsuario = esU"pyme";
             const pyme = {
-                tipoUsuario,
+                tipoUsuario: "pyme",
                 nombrePyme,
                 direccionPyme,
                 encargadoPyme,
@@ -33,7 +33,7 @@ export function RegisterPyme() {
                 descripcionPyme,
                 Contrase,
             };
-            console.log(pyme);
+            // console.log(pyme);
             signupPyme(pyme); // AuthContext
         } catch (error) {
             if (error.response) {

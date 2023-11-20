@@ -32,6 +32,10 @@ const pymeSchema = new mongoose.Schema(
             required: true,
             trim: true,
         },
+        url_img: {
+            type: String,
+            trim: true,
+        },
         Contrase: {
             type: String,
             required: true,

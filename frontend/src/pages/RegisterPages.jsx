@@ -28,7 +28,7 @@ export function Register() {
                 Nombre_Usuario,
                 Correo_Electronico,
                 Contrase,
-                tipoUsuario: "Cliente",
+                tipoUsuario: "cliente",
             };
             // console.log(user);
             signup(user); // AuthContext

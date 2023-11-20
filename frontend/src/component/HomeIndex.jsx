@@ -1,56 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import NavPrin from "./NavbarPrincipal";
 import Footer from "./FooterPrincipal";
+import { pymesReq } from "../api/auth.js";
 
-const pymes = [
-    {
-        nombrePyme: "Pyme 1",
-        categoria: "Categoría 1",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    },
-    {
-        nombrePyme: "Pyme 2",
-        categoria: "Categoría 2",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    },
-    {
-        nombrePyme: "Pyme 3",
-        categoria: "Categoría 3",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    },
-    {
-        nombrePyme: "Pyme 4",
-        categoria: "Categoría 3",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    },
-    {
-        nombrePyme: "Pyme 5",
-        categoria: "Categoría 3",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    },
-    {
-        nombrePyme: "Pyme 6",
-        categoria: "Categoría 3",
-        url_img:
-            "https://previews.123rf.com/images/ginasanders/ginasanders1701/ginasanders170100114/69725983-en-una-peque%C3%B1a-ciudad-italiana-una-tienda-de-frutas-y-verduras-muchos-tipos-diferentes-de-tomate.jpg",
-    }
-    // Agrega más objetos según sea necesario
-];
+// const pymes = [
+//     {
+//         _id: "6558479568c0fc2c8e2da3c9",
+//         tipoUsuario: "pyme",
+//         nombrePyme: "MiPyme22",
+//         direccionPyme: "123 Calle Principal",
+//         encargadoPyme: "Juan Pérez",
+//         categoria: "Tecnología",
+//         descripcionPyme: "Una breve descripción de la pyme.",
+//         url_img:
+//             "https://i.pinimg.com/1200x/28/f1/a9/28f1a972e13e4281b5273891ead173eb.jpg",
+//         Contrase:
+//             "$2a$10$8zr7giQ83r69Xlutg/IMeOdw6Ac6S6.VJF4Un8mu7ZNIlPataZz5.",
+//         createdAt: "2023-11-18T05:11:49.306Z",
+//         updatedAt: "2023-11-18T05:11:49.306Z",
+//         __v: 0,
+//     },
+// ];
 
 const DivDesplazable = ({ children }) => {
-    return (
-        <div className="columns is-multiline">
-            {children}
-        </div>
-    );
+    return <div className="columns is-multiline">{children}</div>;
 };
 
 function HomeIndex() {
+    // DATOS PYME
+    const [pymes, setProfile] = useState([]);
+    useEffect(() => {
+        async function fetchProfile() {
+            try {
+                const response = await pymesReq();
+                setProfile(response.data);
+                // console.log(response.data);
+            } catch (error) {
+                console.error("Error al obtener datos perfil:", error);
+            }
+        }
+        fetchProfile();
+    }, []);
+
     return (
         <div className="container">
             {/* Se importa el componente Navbar correspondiente a la barra de navegacion */}
@@ -69,34 +62,45 @@ function HomeIndex() {
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
-                    <h3 className="title">Pymes recomendadas para ti</h3><br />
+                    <h3 className="title">Pymes recomendadas para ti</h3>
+                    <br />
                 </div>
                 {/* Agrega la sección de imágenes */}
                 <div className="container">
                     <DivDesplazable>
-                        {pymes.map((pyme) => (
-                            <div className="column is-6">
-                                <div className="box" style={{ boxShadow: '10px 10px 5px pink', margin: '10px' }}>
-                                    <div className="container is-flex">
-                                        <div>
-                                            <img
-                                                src={pyme.url_img}
-                                                alt={pyme.nombrePyme}
-                                                style={{
-                                                    height: "100px",
-                                                    borderRadius: "4%",
-                                                }}
-                                            />
-                                        </div>
-                                        <div className="ml-6">
-                                            <h1 className="">{pyme.nombrePyme}</h1>
+                        {pymes.map((pyme, index) => (
+                            <div key={index} className="column is-6">
+                                <Link to={`/pymes/${pyme.id}`}>
+                                    <div
+                                        className="box"
+                                        style={{
+                                            boxShadow: "10px 10px 5px pink",
+                                            margin: "10px",
+                                        }}>
+                                        <div className="container is-flex">
+                                            <div>
+                                                <img
+                                                    src={pyme.url_img}
+                                                    alt={pyme.nombrePyme}
+                                                    style={{
+                                                        height: "100px",
+                                                        borderRadius: "4%",
+                                                    }}
+                                                />
+                                            </div>
+                                            <div className="ml-6">
+                                                <h1 className="">
+                                                    {pyme.nombrePyme}
+                                                </h1>
+                                                <p>{pyme.descripcionPyme}</p>
+                                                <p>{pyme.id}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                         ))}
                     </DivDesplazable>
-
                 </div>
             </section>
 

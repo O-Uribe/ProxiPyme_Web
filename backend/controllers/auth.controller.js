@@ -71,6 +71,8 @@ export const registerPyme = async (req, res) => {
             encargadoPyme,
             categoria,
             descripcionPyme,
+            url_img:
+                "https://i.pinimg.com/1200x/28/f1/a9/28f1a972e13e4281b5273891ead173eb.jpg",
             Contrase: passwordHash,
         });
 
@@ -78,6 +80,7 @@ export const registerPyme = async (req, res) => {
         const token = await createAccessToken({ id: userSaved._id });
 
         res.cookie("token", token);
+        // ENVIAMOS A FRONT
         res.json({
             id: userSaved._id,
             tipoUsuario: userSaved.tipoUsuario,

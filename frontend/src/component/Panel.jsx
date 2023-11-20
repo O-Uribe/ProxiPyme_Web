@@ -24,6 +24,7 @@ function Panel() {
                         <i className="far fa-user"></i> Mi Perfil
                     </a>
                 </div>
+
                 <div className="column has-text-centered my-4">
                     <a className="has-text-danger" href="/editarperfil">
                         <i className="far fa-edit"></i> Editar Perfil

@@ -16,3 +16,6 @@ export const getTask = (id) => axios.get(`${API}/tasks/${id}`);
 
 export const profilReq = (id) => axios.get(`${API}/profile/${id}`);
 export const profilReqPyme = (id) => axios.get(`${API}/profilePyme/${id}`);
+
+export const pymesReq = (user) => axios.get(`${API}/pymes`, user);
+export const pymeProfile = (id) => axios.get(`${API}/pyme/${id}`);

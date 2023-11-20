@@ -11,7 +11,7 @@ function PerfilPyme() {
                 const id = localStorage.getItem("id");
                 const response = await profilReq(id);
                 setProfile(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             } catch (error) {
                 console.error("Error al obtener datos perfil:", error);
             }
@@ -46,7 +46,7 @@ function PerfilPyme() {
 
                     {/* Y la tercera columna muestra la descripcion sobre esta */}
                     <div className="column is-5">
-                        <h1 className="title has-text-black">Datos Pyme</h1>
+                        <h1 className="title has-text-black">Datos Usuario</h1>
                         <aside className="is-medium menu">
                             <p className="menu-label has-text-black">
                                 Correo: {profile.Correo_Electronico}

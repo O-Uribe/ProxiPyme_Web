@@ -54,9 +54,9 @@ function Index() {
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-3by1">
+                <div classname="card">
+                    <div className="card-image">
+                        <figure className="image is-3by1">
                             <img
                                 src="https://cdn.discordapp.com/attachments/1137875950982406215/1163870239914733638/proxi.png?ex=655cd520&is=654a6020&hm=282e101ffa8e9b6f60264c53584cb68d627d949f6ce4ea0bf430de9b06ad49a5&"
                                 alt="Placeholder image"

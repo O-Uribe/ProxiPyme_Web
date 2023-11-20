@@ -40,19 +40,14 @@ const MapView = () => {
     const [Cargando, setCargando] = useState(true);
 
     // BUSQUEDA
-    const categoriaSeleccionada = localStorage.getItem("categoria");
-    // const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
+    const categoriaSeleccionada =
+        localStorage.getItem("categoria") || "sin categoria";
 
     const categorias = [...new Set(tiendas.map((tienda) => tienda.categoria))];
     const categoriasFiltradas = categorias.filter((categoria) =>
         categoria.toLowerCase().includes(categoriaSeleccionada.toLowerCase())
     );
 
-    // const tiendasFiltradas = tiendas.filter(
-    //     (tienda) =>
-    //         categoriaSeleccionada === "" ||
-    //         tienda.categoria === categoriaSeleccionada
-    // );
     const tiendasFiltradas = tiendas.filter(
         (tienda) => tienda.categoria === categoriaSeleccionada
     );

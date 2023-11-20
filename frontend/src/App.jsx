@@ -18,6 +18,7 @@ import Mapa from "./component/Mapa";
 import PPyme from "./component/PerfilPyme";
 import EditarPerfil from "./component/EditarPerfil";
 import PerfilUsuario from "./component/PerfilUsuario";
+import PymeProfile from "./component/PymeProfile";
 
 import ProtectedRouter from "./ProtectedRouter";
 
@@ -50,6 +51,7 @@ function App() {
                             path="/editarperfil"
                             element={<EditarPerfil />}
                         />
+                        <Route path="/pymes/:id" element={<PymeProfile />} />
                     </Route>
                 </Routes>
             </Router>

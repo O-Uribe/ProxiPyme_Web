@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
-            // localStorage.setItem("tipoPerfil", "cliente");
+            localStorage.setItem("tipoPerfil", "cliente");
         } catch (error) {
             // console.log(error.response);
             setErrors(error.response.data);
@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
-            // localStorage.setItem("tipoPerfil", "cliente");
+            localStorage.setItem("tipoPerfil", "cliente");
         } catch (error) {
             // console.log(error.response);
             if (Array.isArray(error.response.data)) {
