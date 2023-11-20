@@ -12,7 +12,7 @@ export function Login() {
 
     const [Correo_Electronico, setCorreo] = useState("");
     const [Contrase, setContraseña] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
+    const [MostrarContra, setMostrarContra] = useState(false);
     const [errors, setErrors] = useState([]);
 
     const handleSubmit = async (e) => {
@@ -75,7 +75,7 @@ export function Login() {
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type={showPassword ? "text" : "password"}
+                                            type={MostrarContra ? "text" : "password"}
                                             value={Contrase}
                                             onChange={(e) =>
                                                 setContraseña(e.target.value)
@@ -84,8 +84,8 @@ export function Login() {
                                             required
                                         />
                                         {/* Boton para mostrar u ocultar contraseña */}
-                                        <button className="button" onClick={() => setShowPassword(!showPassword)}>
-                                            {showPassword ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
+                                        <button className="button" onClick={() => setMostrarContra(!MostrarContra)}>
+                                            {MostrarContra ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
                                         </button>
                                     </div>
 

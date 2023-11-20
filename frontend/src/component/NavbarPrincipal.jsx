@@ -25,9 +25,9 @@ function NavbarPrincipal() {
                         {/* has-icons-left asegura que el icono quede a la izquierda del elemento */}
                         <div className="control has-icons-left">
                             {/* Se crea un campo de entrada con bordes redondeados y un texto indicando su funcionalidad cuando este vacio */}
-                            <input className="input is-rounded" placeholder="Buscar" />
+                            <input className="input is-rounded has-text-danger" placeholder="Buscar por categorias" />
                             {/* Se establece el icono dentro del campo */}
-                            <span className="icon is-left">
+                            <span className="icon is-left has-text-danger">
                                 <i className="fa fa-search"></i>
                             </span>
                         </div>

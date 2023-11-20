@@ -3,7 +3,6 @@ import NavPrin from './NavbarPrincipal';
 import Footer from './FooterPrincipal';
 import MapView from './MapView';
 
-
 function Mapa() {
     return ( 
         <div className="container">
@@ -20,11 +19,6 @@ function Mapa() {
 
                 {/* Se crea una linea horizontal de color rosa fuerte con un margen derecho e izquierdo */}
                 <hr className="has-background-danger ml-6 mr-6" />
-
-                {/* Indica el titulo que indica el contenido presente en la pagina */}
-                <div className="container has-text-black">
-                    <h3 className="title">Mapa con pymes</h3>
-                </div><br />
 
                 {/* Se importa el componente mapa */}
                 <div className="container">

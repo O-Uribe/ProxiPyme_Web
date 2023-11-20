@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Ayuda from "./Ayuda";
+import RProblema from "./RProblema";
 
 function Panel() {
     const [Abierto, setAbierto] = useState(false);
+    const [AbrirRep, setAbrirRep] = useState(false);
 
     return (
         <div className="container">
@@ -26,13 +28,19 @@ function Panel() {
                         </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" href="/reportarP">
-                            <i className="far fa-flag"></i> Reportar Problema
+                        <a className="has-text-danger-light"
+                        onClick={() => setAbrirRep(true)}>
+                        <i className="far fa-flag"></i>
+                        <RProblema AbrirRep={AbrirRep} setAbrirRep={setAbrirRep}></RProblema>
+                        Reportar Problema
                         </a>
                     </div>
                     <div className="column has-text-centered my-4">
-                        <a className="has-text-danger-light" onClick={() => setAbierto(true)}>
-                            <i className="far fa-question-circle"></i> <Ayuda Abierto={Abierto} setAbierto={setAbierto}></Ayuda> Ayuda
+                        <a className="has-text-danger-light"
+                        onClick={() => setAbierto(true)}>
+                        <i className="far fa-question-circle"></i>
+                        <Ayuda Abierto={Abierto} setAbierto={setAbierto}></Ayuda>
+                        Ayuda
                         </a>
                     </div>
                     <div className="column has-text-centered my-4">

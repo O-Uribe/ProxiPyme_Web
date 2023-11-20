@@ -84,12 +84,17 @@ const MapView = () => {
 
     return (
         <div>
-            <input
-                type="text"
-                placeholder="Buscar por categoría"
-                onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-                list="categorias"
-            />
+            <div className="navbar-item ml-3 mr-5 is-justify-content-center">
+                {/* has-icons-left asegura que el icono quede a la izquierda del elemento */}
+                <div className="control has-icons-left">
+                    {/* Se crea un campo de entrada con bordes redondeados y un texto indicando su funcionalidad cuando este vacio */}
+                    <input className="input is-rounded has-text-danger" placeholder="Buscar por categorias" />
+                    {/* Se establece el icono dentro del campo */}
+                    <span className="icon is-left has-text-danger">
+                        <i className="fa fa-search"></i>
+                    </span>
+                </div>
+            </div><br />
             <datalist id="categorias">
                 {categoriasFiltradas.map((categoria) => (
                     <option key={categoria} value={categoria} />
@@ -105,6 +110,10 @@ const MapView = () => {
                 {/* Añade marcadores en la ubicacion actual y en el campus norte */}
                 <Marker position={Centro}>
                     <Popup> Tu ubicación actual. </Popup>
+                </Marker>
+
+                <Marker position={CentroPorDefecto}>
+                    <Popup> UCT - Campus Norte. </Popup>
                 </Marker>
 
                 {/* Añade un marcador para cada tienda */}

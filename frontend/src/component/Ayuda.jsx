@@ -9,11 +9,11 @@ export default ({ Abierto, setAbierto }) => (
                 <div className="modal-content">
                     <div className="box">
                         <button className="button is-danger" onClick={close}> Cerrar </button>
-                        <h1 className="title has-text-black">Preguntas Frecuentes</h1>
+                        <h1 className="title has-text-black has-text-centered">Preguntas Frecuentes</h1>
                     </div>
-
+                    
                     <div className="container columns is-12">
-                        <div className="column is-6 mr-6" style={{ boxShadow: '10px 10px 5px pink' }} >
+                        <div className="column is-6 mr-6" style={{ boxShadow: '10px 10px 5px pink' }}>
                             <h1 className="title">¿Para que sirve esta pagina? </h1>
                             <p>• Esta pagina busca ayudar a las pequeñas y medianas empresas (Pymes) a llegar a mas usuarios para vender sus productos,
                                 y a los usuarios a conocer las pymes que estan cerca de el</p>
