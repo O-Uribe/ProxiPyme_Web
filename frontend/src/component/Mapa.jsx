@@ -1,10 +1,10 @@
-import React from 'react';
-import NavPrin from './NavbarPrincipal';
-import Footer from './FooterPrincipal';
-import MapView from './MapView';
+import React from "react";
+import NavPrin from "./NavbarPrincipal";
+import Footer from "./FooterPrincipal";
+import MapView from "./MapView";
 
 function Mapa() {
-    return ( 
+    return (
         <div className="container">
             {/* Se importa el componente Navbar correspondiente a la barra de navegacion */}
             <NavPrin></NavPrin>
@@ -16,20 +16,18 @@ function Mapa() {
                     <br />
                     <h2 className="title">¡Proxipyme!</h2>
                 </div>
-
                 {/* Se crea una linea horizontal de color rosa fuerte con un margen derecho e izquierdo */}
                 <hr className="has-background-danger ml-6 mr-6" />
-
                 {/* Se importa el componente mapa */}
                 <div className="container">
                     <MapView></MapView>
-                </div> <br />
-
+                </div>{" "}
+                <br />
             </section>
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
         </div>
-    )
+    );
 }
 
-export default Mapa
+export default Mapa;

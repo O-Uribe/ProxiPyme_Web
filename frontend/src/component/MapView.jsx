@@ -40,18 +40,23 @@ const MapView = () => {
     const [Cargando, setCargando] = useState(true);
 
     // BUSQUEDA
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
+    const categoriaSeleccionada = localStorage.getItem("categoria");
+    // const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
 
     const categorias = [...new Set(tiendas.map((tienda) => tienda.categoria))];
     const categoriasFiltradas = categorias.filter((categoria) =>
         categoria.toLowerCase().includes(categoriaSeleccionada.toLowerCase())
     );
 
+    // const tiendasFiltradas = tiendas.filter(
+    //     (tienda) =>
+    //         categoriaSeleccionada === "" ||
+    //         tienda.categoria === categoriaSeleccionada
+    // );
     const tiendasFiltradas = tiendas.filter(
-        (tienda) =>
-            categoriaSeleccionada === "" ||
-            tienda.categoria === categoriaSeleccionada
+        (tienda) => tienda.categoria === categoriaSeleccionada
     );
+
     useEffect(() => {
         const UbiUsuario = async () => {
             try {
@@ -59,7 +64,6 @@ const MapView = () => {
                 const Posicion = await new Promise((resolve, reject) => {
                     navigator.geolocation.getCurrentPosition(resolve, reject);
                 });
-
                 // Extrae las coordenadas
                 const { latitude, longitude } = Posicion.coords;
                 // Actualiza estado del mapa
@@ -74,7 +78,6 @@ const MapView = () => {
                 setCargando(false);
             }
         };
-
         UbiUsuario();
     }, []);
 
@@ -88,19 +91,23 @@ const MapView = () => {
                 {/* has-icons-left asegura que el icono quede a la izquierda del elemento */}
                 <div className="control has-icons-left">
                     {/* Se crea un campo de entrada con bordes redondeados y un texto indicando su funcionalidad cuando este vacio */}
-                    <input className="input is-rounded has-text-danger" placeholder="Buscar por categorias" />
+                    <input
+                        className="input is-rounded has-text-danger"
+                        placeholder="Buscar por categorias"
+                    />
                     {/* Se establece el icono dentro del campo */}
                     <span className="icon is-left has-text-danger">
                         <i className="fa fa-search"></i>
                     </span>
                 </div>
-            </div><br />
+            </div>
+            <br />
             <datalist id="categorias">
                 {categoriasFiltradas.map((categoria) => (
                     <option key={categoria} value={categoria} />
                 ))}
             </datalist>
-
+            <h1 className="mb-4">{categoriaSeleccionada}</h1>
             <MapContainer
                 center={Centro}
                 zoom={15}
@@ -117,8 +124,12 @@ const MapView = () => {
                 </Marker>
 
                 {/* Añade un marcador para cada tienda */}
+
                 {tiendasFiltradas.map((tienda) => (
-                    <Marker position={tienda} icon={tiendaIcon}>
+                    <Marker
+                        key={tienda.nombrePyme}
+                        position={tienda}
+                        icon={tiendaIcon}>
                         <Popup>
                             <h2>{tienda.nombrePyme}</h2>
                             <p>Categoría: {tienda.categoria}</p>

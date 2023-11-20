@@ -63,6 +63,7 @@ function PerfilPyme() {
 
                 {/* Indica el titulo del nuevo contenido */}
                 <h1 className="title has-text-black">Productos de la Pyme</h1>
+                <h1 className="title has-text-black">Favoritos</h1>
                 {/* Se crea un nuevo contenedor que mostrara los productos de la pyme */}
                 <div className="container column is-12">
                     <div className="columns">{/* Productos */}</div>
