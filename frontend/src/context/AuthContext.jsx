@@ -25,35 +25,39 @@ export const AuthProvider = ({ children }) => {
     const signup = async (user) => {
         try {
             const response = await registrerRecuest(user);
-            console.log(response.data);
+            // console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
+            // localStorage.setItem("tipoPerfil", "cliente");
         } catch (error) {
             // console.log(error.response);
             setErrors(error.response.data);
         }
     };
+
     const signupPyme = async (user) => {
         try {
             const response = await registrerRecuestPyme(user);
-            console.log(response.data);
+            // console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
-            // localStorage.setItem("id", response.data.token);
+            localStorage.setItem("tipoPerfil", "pyme");
         } catch (error) {
             // console.log(error.response);
             setErrors(error.response.data);
         }
     };
+
     const signin = async (user) => {
         try {
             const response = await loginRequest(user);
-            console.log(response.data);
+            // console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
+            // localStorage.setItem("tipoPerfil", "cliente");
         } catch (error) {
             // console.log(error.response);
             if (Array.isArray(error.response.data)) {
@@ -66,10 +70,11 @@ export const AuthProvider = ({ children }) => {
     const signinPyme = async (user) => {
         try {
             const response = await loginRequestPyme(user);
-            console.log(response.data);
+            // console.log(response.data);
             setUser(response.data);
             setIsAuthenticated(true);
             localStorage.setItem("id", response.data.id);
+            localStorage.setItem("tipoPerfil", "pyme");
         } catch (error) {
             // console.log(error.response);
             if (Array.isArray(error.response.data)) {

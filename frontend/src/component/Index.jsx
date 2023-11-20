@@ -69,31 +69,55 @@ function Index() {
                 <hr className="has-background-danger" />
 
                 {/* Indica el titulo del nuevo contenido */}
-                <h1 className="title has-text-black">¡Únete a nosotros!</h1>
+                <h1 className="title has-text-black">
+                    ¡Únete a nosotros!
+                    <br></br>
+                    Como Cliente o Pyme.
+                </h1>
                 {/* Se crea un nuevo contenedor que igualmente se divide en dos partes iguales */}
-                <div className="container column is-12">
+                <div className="column is-12 p-4">
                     <div className="columns">
-                        {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
-                        <div className="column is-6">
-                            <a
-                                className="button is-fullwidth has-background-danger has-text-white"
-                                href="/loginPyme">
-                                Iniciar Sesión
-                            </a>
+                        <div className="box column is-6">
+                            <h1 className="mb-4 mt-4">Cliente</h1>
+                            {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
+                            <div className="mb-4 is-full">
+                                <a
+                                    className="button is-fullwidth has-background-danger has-text-white"
+                                    href="/login">
+                                    Iniciar Sesión
+                                </a>
+                            </div>
+                            {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
+                            <div className="mb-4 is-full">
+                                <a
+                                    className="button is-fullwidth has-background-danger has-text-white"
+                                    href="/register">
+                                    Registrarme
+                                </a>
+                            </div>
                         </div>
-                        {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
-                        <div className="column is-6">
-                            <a
-                                className="button is-fullwidth has-background-danger has-text-white"
-                                href="/registerPyme">
-                                Registrarme
-                            </a>
+                        <div className="box column is-6">
+                            <h1 className="mb-4 mt-4">Pyme</h1>
+                            {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
+                            <div className="mb-4 is-full">
+                                <a
+                                    className="button is-fullwidth has-background-danger has-text-white"
+                                    href="/loginPyme">
+                                    Iniciar Sesión
+                                </a>
+                            </div>
+                            {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
+                            <div className="mb-4 is-full">
+                                <a
+                                    className="button is-fullwidth has-background-danger has-text-white"
+                                    href="/registerPyme">
+                                    Registrarme
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <br />
                 </div>
             </section>
-
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>
         </div>

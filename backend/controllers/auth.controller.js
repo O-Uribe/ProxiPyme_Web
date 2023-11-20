@@ -1,8 +1,9 @@
 import User from "../models/user.models.js";
 import Pyme from "../models/pyme.models.js";
 import bcryptjs from "bcryptjs";
-import { createAccessToken } from "../libs/jwt.js";
 import jwt from "jsonwebtoken";
+
+import { createAccessToken } from "../libs/jwt.js";
 import { TOKEN_SECRET } from "../config.js";
 
 export const register = async (req, res) => {
@@ -159,18 +160,34 @@ export const logout = async (req, res) => {
 };
 
 export const profile = async (req, res) => {
-    const userFound = await User.findById(req.user.id);
-    const { token } = req.cookies;
+    const userFound = await User.findById(req.params.id);
+    // const { token } = req.cookies;
 
     if (!userFound) return res.status(400).json({ message: "User not found" });
 
     return res.json({
         id: userFound._id,
-        username: userFound.Nombre_Usuario,
-        email: userFound.Correo_Electronico,
-        token,
+        Nombre_Usuario: userFound.Nombre_Usuario,
+        Correo_Electronico: userFound.Correo_Electronico,
     });
 
+    // res.send("profile");
+};
+
+export const profilePyme = async (req, res) => {
+    const pymeFound = await Pyme.findById(req.params.id);
+
+    if (!pymeFound) return res.status(400).json({ message: "User not found" });
+
+    return res.json({
+        id: pymeFound._id,
+        tipoUsuario: pymeFound.tipoUsuario,
+        nombrePyme: pymeFound.nombrePyme,
+        direccionPyme: pymeFound.direccionPyme,
+        encargadoPyme: pymeFound.encargadoPyme,
+        categoria: pymeFound.categoria,
+        descripcionPyme: pymeFound.descripcionPyme,
+    });
     // res.send("profile");
 };
 

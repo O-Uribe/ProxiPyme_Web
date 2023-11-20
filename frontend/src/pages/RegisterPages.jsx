@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { useRedirectIfAuthenticated } from "../context/Autenticacion";
 
-export function LoginPyme() {
-    const { signinPyme, isAuthenticated, errors: LoginErrors } = useAuth();
-    // const navigate = useNavigate();
+export function Register() {
+    const { signup, isAuthenticated, errors: RegisterErrors } = useAuth();
+    const navigate = useNavigate();
 
     // REDIRECCION
-    useRedirectIfAuthenticated(isAuthenticated, "/home");
+    useEffect(() => {
+        if (isAuthenticated) navigate("/home");
+    }, [isAuthenticated]);
 
-    const [nombrePyme, setCorreo] = useState("");
-    const [Contrase, setContraseña] = useState("");
+    const [primerNombre, setPrimerNombre] = useState("");
+    const [primerApellido, setPrimerApellido] = useState("");
+    const [Nombre_Usuario, setNombre] = useState("");
+    const [Correo_Electronico, setCorreo] = useState("");
     const [MostrarContra, setMostrarContra] = useState(false);
-    const [errors, setErrors] = useState([]);
+    const [Contrase, setContraseña] = useState("");
+    // const [error, setError] = useState([]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const pyme = {
-                nombrePyme,
+            const user = {
+                primerNombre,
+                primerApellido,
+                Nombre_Usuario,
+                Correo_Electronico,
                 Contrase,
+                tipoUsuario: "Cliente",
             };
-            signinPyme(pyme);
+            // console.log(user);
+            signup(user); // AuthContext
         } catch (error) {
-            // TIPOS DE ERRORES //
             if (error.response) {
                 console.error("Respuesta del servidor:", error.response.data);
             } else if (error.request) {
@@ -38,7 +46,7 @@ export function LoginPyme() {
     return (
         //Crea el contenedor principal de la pagina
         <div className="container">
-            {LoginErrors.map((error, i) => (
+            {RegisterErrors.map((error, i) => (
                 <div key={i}>{error}</div>
             ))}
             <section className="hero">
@@ -49,7 +57,9 @@ export function LoginPyme() {
                         {/* Configura un estilo de columna */}
                         <div className="column is-10 is-offset-1">
                             {/* Da un estilo de color negro al titulo */}
-                            <h3 className="title has-text-black">Login</h3>
+                            <h3 className="title has-text-black">
+                                ¿Quieres registrarte en "Proxipyme"?
+                            </h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
                             <hr className="login-hr has-background-danger" />
 
@@ -57,16 +67,60 @@ export function LoginPyme() {
                             <div className="box">
                                 {/*____________ FORM ____________*/}
                                 <form onSubmit={handleSubmit}>
-                                    {/* Crea el campo para el correo, e indica que es un campo obligatorio */}
+                                    {/* Campos de entrada del usuario */}
+                                    {/* PRIMER NOMBRE */}
                                     <div className="field">
                                         <input
                                             className="input"
                                             type="text"
-                                            value={nombrePyme}
+                                            value={primerNombre}
+                                            onChange={(e) =>
+                                                setPrimerNombre(e.target.value)
+                                            }
+                                            placeholder="Primer nombre"
+                                            required
+                                        />
+                                    </div>
+                                    {/* PRIMER APELLIDO */}
+                                    <div className="field">
+                                        <input
+                                            className="input"
+                                            type="text"
+                                            value={primerApellido}
+                                            onChange={(e) =>
+                                                setPrimerApellido(
+                                                    e.target.value
+                                                )
+                                            }
+                                            placeholder="Primer apellido"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Crea el campo para el Nombre, e indica que es un campo obligatorio */}
+                                    <div className="field">
+                                        <input
+                                            className="input"
+                                            type="text"
+                                            value={Nombre_Usuario}
+                                            onChange={(e) =>
+                                                setNombre(e.target.value)
+                                            }
+                                            placeholder="Nombre de usuario"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Crea el campo para el correo, e indica que es un campo obligatorio */}
+                                    <div className="field">
+                                        <input
+                                            className="input"
+                                            type="email"
+                                            value={Correo_Electronico}
                                             onChange={(e) =>
                                                 setCorreo(e.target.value)
                                             }
-                                            placeholder="Nombre Pyme"
+                                            placeholder="Correo electronico"
                                             required
                                         />
                                     </div>
@@ -84,7 +138,7 @@ export function LoginPyme() {
                                             onChange={(e) =>
                                                 setContraseña(e.target.value)
                                             }
-                                            placeholder="Ingresa tu contraseña"
+                                            placeholder="Contraseña"
                                             required
                                         />
                                         {/* Boton para mostrar u ocultar contraseña */}
@@ -100,18 +154,25 @@ export function LoginPyme() {
                                             )}
                                         </p>
                                     </div>
+                                    {/* Crea el campo para los terminos y condiciones, e indica que es un campo obligatorio */}
+                                    <div className="field">
+                                        <label className="checkbox">
+                                            <input type="checkbox" required />
+                                            Condiciones
+                                        </label>
+                                    </div>
 
                                     {/* Crea el boton para registro, aplicando estilos de texto blanco, que ocupe todo el ancho disponible y un color de fondo rosa*/}
                                     <button className="button has-text-white is-fullwidth has-background-danger">
-                                        Login
+                                        Registrarme
                                     </button>
                                 </form>
                                 <p>
-                                    ¿No tienes una cuenta aun?
+                                    ¿Ya tienes una cuenta?
                                     <Link
-                                        to="/registerPyme"
+                                        to="/login"
                                         className="has-text-danger">
-                                        Registrate
+                                        Login
                                     </Link>
                                 </p>
                             </div>
@@ -123,4 +184,4 @@ export function LoginPyme() {
     );
 }
 
-export default LoginPyme;
+export default Register;

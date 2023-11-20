@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import Switch from "react-switch";
 
 export function RegisterPyme() {
-    const [esUsuarioNormal, setEsUsuarioNormal] = useState(false);
-
-    const handleChange = (checked) => {
-        setEsUsuarioNormal(checked);
-    };
-
     const { signupPyme, isAuthenticated, errors: RegisterErrors } = useAuth();
     const navigate = useNavigate();
 
@@ -145,7 +138,11 @@ export function RegisterPyme() {
                                     <div className="field">
                                         <input
                                             className="input"
-                                            type={MostrarContra ? "text" : "password"}
+                                            type={
+                                                MostrarContra
+                                                    ? "text"
+                                                    : "password"
+                                            }
                                             value={Contrase}
                                             onChange={(e) =>
                                                 setContraseña(e.target.value)
@@ -154,20 +151,17 @@ export function RegisterPyme() {
                                             required
                                         />
                                         {/* Boton para mostrar u ocultar contraseña */}
-                                        <button className="button" onClick={() => setMostrarContra(!MostrarContra)}>
-                                            {MostrarContra ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
+                                        <button
+                                            className="button"
+                                            onClick={() =>
+                                                setMostrarContra(!MostrarContra)
+                                            }>
+                                            {MostrarContra ? (
+                                                <i className="fas fa-eye-slash"></i>
+                                            ) : (
+                                                <i className="fas fa-eye"></i>
+                                            )}
                                         </button>
-                                    </div>
-
-                                    {/* USUARIO O PYME */}
-                                    <div className="field">
-                                        <label className="checkbox">
-                                            <span>¿Registrar como Pyme? </span>
-                                            <Switch
-                                                onChange={handleChange}
-                                                checked={esUsuarioNormal}
-                                            />
-                                        </label>
                                     </div>
 
                                     {/* Crea el boton para registro, aplicando estilos de texto blanco, que ocupe todo el ancho disponible y un color de fondo rosa*/}
@@ -176,8 +170,12 @@ export function RegisterPyme() {
                                     </button>
                                 </form>
                                 <p>
-                                    ¿Ya tienes una cuenta? 
-                                    <Link to="/login" className="has-text-danger">Login</Link>
+                                    ¿Ya tienes una cuenta?
+                                    <Link
+                                        to="/loginPyme"
+                                        className="has-text-danger">
+                                        Login
+                                    </Link>
                                 </p>
                             </div>
                         </div>

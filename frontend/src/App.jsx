@@ -1,11 +1,15 @@
 import "bulma/css/bulma.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import "./App.css";
-import Register from "./component/Register";
+import { AuthProvider } from "./context/AuthContext";
+
+import Register from "./pages/RegisterPages";
 import RegisterPyme from "./pages/RegisterPagesPyme";
-import Login from "./component/Login";
+import Login from "./pages/LoginPages";
 import LoginPyme from "./pages/LoginPagesPyme";
+
 import Index from "./component/Index";
 import HomeIndex from "./component/HomeIndex";
 import Favoritos from "./component/Favoritos";
@@ -14,8 +18,6 @@ import Mapa from "./component/Mapa";
 import PPyme from "./component/PerfilPyme";
 import EditarPerfil from "./component/EditarPerfil";
 import PerfilUsuario from "./component/PerfilUsuario";
-import { AuthProvider } from "./context/AuthContext";
-
 
 import ProtectedRouter from "./ProtectedRouter";
 
@@ -36,12 +38,18 @@ function App() {
 
                     <Route element={<ProtectedRouter />}>
                         <Route path="/home" element={<HomeIndex />} />
-                        <Route path="/estadisticas" element={<Estadisticas />}/>
+                        <Route
+                            path="/estadisticas"
+                            element={<Estadisticas />}
+                        />
                         <Route path="/mapa" element={<Mapa />} />
                         <Route path="/favoritos" element={<Favoritos />} />
-                        <Route path="/perfil" element={<PPyme />} />
-                        <Route path="/perfilusuario" element={<PerfilUsuario />} />
-                        <Route path="/editarperfil" element={<EditarPerfil />} />
+                        <Route path="/perfilPyme" element={<PPyme />} />
+                        <Route path="/perfil" element={<PerfilUsuario />} />
+                        <Route
+                            path="/editarperfil"
+                            element={<EditarPerfil />}
+                        />
                     </Route>
                 </Routes>
             </Router>

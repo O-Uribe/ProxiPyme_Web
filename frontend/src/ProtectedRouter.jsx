@@ -8,7 +8,7 @@ function ProtectedRouter() {
     const { user, isAuthenticated } = useAuth();
     // console.log(user);
     let id = localStorage.getItem("id");
-    console.log(id);
+    // console.log(id);
     // console.log(user, isAuthenticated);
 
     if (!id) return <Navigate to="/loginPyme" replace />;

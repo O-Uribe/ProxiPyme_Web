@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./NavbarPrincipal";
 import Footer from "./FooterPrincipal";
-import { getTasks, getTask } from "../api/auth.js";
+import { profilReqPyme } from "../api/auth.js";
 
 function PerfilPyme() {
-    const [tasks, setTasks] = useState([]);
+    const [profile, setProfile] = useState([]);
     useEffect(() => {
-        async function fetchTasks() {
+        async function fetchProfile() {
             try {
                 const id = localStorage.getItem("id");
-                const response = await getTask(id);
-                setTasks(response.data);
+                const response = await profilReqPyme(id);
+                setProfile(response.data);
                 console.log(response.data);
             } catch (error) {
-                console.error("Error al obtener tareas:", error);
+                console.error("Error al obtener datos perfil:", error);
             }
         }
-        fetchTasks();
+        fetchProfile();
     }, []);
 
     return (
@@ -30,7 +30,7 @@ function PerfilPyme() {
                     {/* La primera muestra el nombre de la pyme */}
                     <div className="column is-5">
                         <h1 className="title has-text-black">
-                            {tasks.nombrePyme}
+                            {profile.nombrePyme}
                         </h1>
                     </div>
                     {/* La segunda columna muestra la imagen de la Pyme */}
@@ -49,10 +49,10 @@ function PerfilPyme() {
                         <h1 className="title has-text-black">Datos Pyme</h1>
                         <aside className="is-medium menu">
                             <p className="menu-label has-text-black">
-                                Descripcion: {tasks.descripcionPyme}
-                                Direccion: {tasks.direccionPyme}
-                                Encargado: {tasks.encargadoPyme}
-                                Categoria: {tasks.categoria}
+                                Descripcion: {profile.descripcionPyme}
+                                Direccion: {profile.direccionPyme}
+                                Encargado: {profile.encargadoPyme}
+                                Categoria: {profile.categoria}
                             </p>
                             <p className="menu-label has-text-black">
                                 <i class="fa fa-location-dot"></i>
