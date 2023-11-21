@@ -1,16 +1,31 @@
 {
-    "dependencies": {
-        "concurrently": "^7.6.0",
-        "currently": "^0.0.8",
-        "dotenv": "^16.3.1",
-        "mongodb": "^6.0.0",
-        "mongoose": "^7.5.0",
-        "nodemon": "^2.0.15",
-        "vite": "^2.6.15",
-        "express": "^4.17.1",
-        "@vitejs/plugin-react": "^1.0.7"
-    },
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
     "scripts": {
-        "start": "concurrently \"cd ./backend && npm run server\" \"cd ./frontend && npm run dev\""
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "server": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@cloudinary/react": "^1.11.2",
+        "@cloudinary/url-gen": "^1.13.0",
+        "bcryptjs": "^2.4.3",
+        "cloudinary": "^1.41.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "currently": "^0.0.8",
+        "express": "^4.17.3",
+        "jsonwebtoken": "^9.0.2",
+        "mongobd": "^0.0.1-security.0",
+        "mongoose": "^7.6.5",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.0.1",
+        "zod": "^3.22.4"
     }
 }
