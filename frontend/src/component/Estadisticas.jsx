@@ -4,6 +4,7 @@ import Footer from './FooterPrincipal';
 import { Tabla } from "./Tabla";
 import { Grafico } from "./Grafico";
 import { FcPositiveDynamic } from "react-icons/fc";
+
 function Estadisticas() {
     return (
         <div className="container">
@@ -19,22 +20,17 @@ function Estadisticas() {
                 </div>
 
                 {/* Se crea una linea horizontal de color rosa fuerte con un margen derecho e izquierdo */}
-                <hr className="has-background-danger ml-6 mr-6" />
+                <hr className="has-text-danger ml-6 mr-6" />
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
                     <h3 className="title"><FcPositiveDynamic style={{fontSize: "60px"}}/>Estadísticas</h3>
                     <Tabla/>
+                    <br />
                     <Grafico/>
+                    <br />
                 </div>
             </section>
-
-            
-                 
-                
-
-
-            
 
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>

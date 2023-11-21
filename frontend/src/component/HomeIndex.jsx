@@ -58,7 +58,7 @@ function HomeIndex() {
                 </div>
 
                 {/* Se crea una linea horizontal de color rosa fuerte con un margen derecho e izquierdo */}
-                <hr className="has-background-danger ml-6 mr-6" />
+                <hr className="has-text-danger ml-6 mr-6" />
 
                 {/* Indica el titulo que indica el contenido presente en la pagina */}
                 <div className="container has-text-black">
@@ -101,7 +101,7 @@ function HomeIndex() {
                             </div>
                         ))}
                     </DivDesplazable>
-                </div>
+                </div><br />
             </section>
 
             {/* Se importa el componente Footer correspondiente al pie de pagina */}

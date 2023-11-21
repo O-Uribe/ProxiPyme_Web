@@ -7,9 +7,9 @@ export default ({ AbrirRep, setAbrirRep }) => (
             <div className="modal is-active">
                 <div className="modal-background"></div>
                 <div className="modal-content">
-                    <div className="box">
-                        <button className="button is-danger" onClick={close}> Cerrar </button>
-                        <h1 className="title has-text-black has-text-centered">Reportar Problema</h1>
+                    <div className="box is-flex is-justify-content-center is-align-items-center">
+                        <button className="button is-danger mr-6" onClick={close}> Cerrar </button>
+                        <h1 className="title has-text-black">Reportar Problema</h1>
                     </div>
 
                     <div className="container" style={{ boxShadow: '10px 10px 5px pink', width: '15cm' }}>

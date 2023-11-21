@@ -1,8 +1,9 @@
 import React from 'react';
 import { FcCollaboration, FcGoogle, FcPhoneAndroid, FcStatistics } from "react-icons/fc";
+
 function Footer() {
     return (
-        <div className="container">
+        <div className="container is-paddingless">
             {/* Se crea el footer con un fondo rosa y un texto mas claro, ademas se divide en 12 columnas */}
             <footer className="footer has-background-danger has-text-danger-light columns is-12">
                 {/* Se crea una columna que ocupa 3 del total y el texto se alinea a la derecha */}
@@ -13,7 +14,7 @@ function Footer() {
 
                 {/* Se crea una columna que ocupara las restantes y se centra el texto horizontalmente */}
                 <div className="column has-text-center">
-                    <h1 className="title has-text-black">Proxipyme te está esperando</h1><br />
+                    <h1 className="title has-text-black">Proxipyme te está esperando</h1>
                     <FcCollaboration style={{fontSize: "100px"}}/>
                     <h1 className="title has-text-black">¿Qué esperas para unirte?</h1>
                     <FcGoogle style={{fontSize: "50px"}}/><FcPhoneAndroid style={{fontSize: "50px"}}/><FcStatistics style={{fontSize: "50px"}}/>

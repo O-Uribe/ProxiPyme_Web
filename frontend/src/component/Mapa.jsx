@@ -17,7 +17,7 @@ function Mapa() {
                     <h2 className="title">¡Proxipyme!</h2>
                 </div>
                 {/* Se crea una linea horizontal de color rosa fuerte con un margen derecho e izquierdo */}
-                <hr className="has-background-danger ml-6 mr-6" />
+                <hr className="has-text-danger ml-6 mr-6" />
                 {/* Se importa el componente mapa */}
                 <div className="container">
                     <MapView></MapView>

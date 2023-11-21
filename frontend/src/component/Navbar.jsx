@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navbar() {
     return (
-        <div className="container">
+        <div className="container is-paddingless">
             {/* Se crea una barra de navegacion con el contenido centrado horizontalmente y dividido en 12 columnas*/}
             <nav className="navbar is-danger is-justify-content-center columns is-12">
                 {/* Se crea un contenedor de columnas */}
@@ -14,7 +14,7 @@ function Navbar() {
 
                     {/* Las siguientes 8 para mostrar un titulo de bienvenida */}
                     <div className="column is-8"> <br />
-                        <h1 className="title has-text-black">¡Bienvenido de Proxipyme!</h1><br />
+                        <h1 className="title has-text-danger-light">¡Bienvenido a Proxipyme!</h1><br />
                     </div>
 
                     {/* Las siguientes son usadas para mostrar un redirecionamiento*/}

@@ -24,18 +24,18 @@ function PerfilPyme() {
             <Navbar></Navbar>
 
             <section className="hero has-background-danger-light columns is-12">
-                <br />
-                <br />
+                <br /> <br />
                 <div className="container columns is-12">
                     {/* La primera muestra el nombre de la pyme */}
                     <div className="column is-5">
-                        <h1 className="title has-text-black">
+                        <h1 className="title has-text-black" style={{ boxShadow: '15px 15px 10px pink' }}>
                             {profile.Nombre_Usuario}
-                        </h1>
+                            N {/* Borrar la N */}
+                        </h1><br />
                     </div>
                     {/* La segunda columna muestra la imagen de la Pyme */}
                     <div className="column is-2">
-                        <figure className="image is-128x128">
+                        <figure className="image is-128x128 ml-5">
                             <img
                                 className="is-rounded"
                                 src="https://www.grafitos.com.co/wp-content/uploads/2021/07/brillantina-celetes-tornasol-900x900.jpg"
@@ -46,20 +46,19 @@ function PerfilPyme() {
 
                     {/* Y la tercera columna muestra la descripcion sobre esta */}
                     <div className="column is-5">
-                        <h1 className="title has-text-black">Datos Usuario</h1>
+                        <h1 className="title has-text-black" style={{ boxShadow: '15px 15px 10px pink' }}>Datos Usuario</h1>
                         <aside className="is-medium menu">
-                            <p className="menu-label has-text-black">
-                                Correo: {profile.Correo_Electronico}
-                            </p>
-                            <p className="menu-label has-text-black">
-                                <i class="fa fa-location-dot"></i>
+                            <p className="menu-label has-text-black has-text-left ml-4">
+                                Correo: {profile.Correo_Electronico} <br />
+                                <i class="fa fa-location-dot"></i>Ubicacion: <br />
+                                mas datos
                             </p>
                         </aside>
                     </div>
                 </div>
 
                 {/* Se crea una linea divisora para separar el contenido */}
-                <hr className="has-background-danger ml-6 mr-6" />
+                <hr className="has-text-danger ml-6 mr-6" />
 
                 {/* Indica el titulo del nuevo contenido */}
                 <h1 className="title has-text-black">Productos de la Pyme</h1>

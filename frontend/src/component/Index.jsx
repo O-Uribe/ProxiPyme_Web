@@ -54,6 +54,9 @@ function Index() {
                     </div>
                 </div>
 
+                {/* Se crea una linea divisora para separar el contenido */}
+                <hr className="has-text-danger" />
+
                 <div classname="card">
                     <div className="card-image">
                         <figure className="image is-3by1">
@@ -66,7 +69,7 @@ function Index() {
                 </div>
 
                 {/* Se crea una linea divisora para separar el contenido */}
-                <hr className="has-background-danger" />
+                <hr className="has-text-danger" />
 
                 {/* Indica el titulo del nuevo contenido */}
                 <h1 className="title has-text-black">
@@ -75,48 +78,47 @@ function Index() {
                     Como Cliente o Pyme.
                 </h1>
                 {/* Se crea un nuevo contenedor que igualmente se divide en dos partes iguales */}
-                <div className="column is-12 p-4">
-                    <div className="columns">
-                        <div className="box column is-6">
-                            <h1 className="mb-4 mt-4">Cliente</h1>
-                            {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
-                            <div className="mb-4 is-full">
-                                <a
-                                    className="button is-fullwidth has-background-danger has-text-white"
-                                    href="/login">
-                                    Iniciar Sesión
-                                </a>
-                            </div>
-                            {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
-                            <div className="mb-4 is-full">
-                                <a
-                                    className="button is-fullwidth has-background-danger has-text-white"
-                                    href="/register">
-                                    Registrarme
-                                </a>
-                            </div>
+                <div className="columns mx-5">
+                    <div className="box column is-6 mr-4" style={{ boxShadow: '25px 25px 15px pink' }}>
+                        <h1 className="has-text-danger mb-4">Cliente</h1>
+                        {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
+                        <div className="mb-4">
+                            <a
+                                className="button is-fullwidth has-background-danger has-text-white"
+                                href="/login">
+                                Iniciar Sesión
+                            </a>
                         </div>
-                        <div className="box column is-6">
-                            <h1 className="mb-4 mt-4">Pyme</h1>
-                            {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
-                            <div className="mb-4 is-full">
-                                <a
-                                    className="button is-fullwidth has-background-danger has-text-white"
-                                    href="/loginPyme">
-                                    Iniciar Sesión
-                                </a>
-                            </div>
-                            {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
-                            <div className="mb-4 is-full">
-                                <a
-                                    className="button is-fullwidth has-background-danger has-text-white"
-                                    href="/registerPyme">
-                                    Registrarme
-                                </a>
-                            </div>
+                        {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
+                        <div className="mb-4">
+                            <a
+                                className="button is-fullwidth has-background-danger has-text-white"
+                                href="/register">
+                                Registrarme
+                            </a>
+                        </div>
+                    </div>
+                    <div className="box column is-6 mr-4" style={{ boxShadow: '25px 25px 15px pink' }}>
+                        <h1 className="has-text-danger mb-4">Pyme</h1>
+                        {/* La primera columna muestra un boton que redirecciona al inicio de sesion */}
+                        <div className="mb-4">
+                            <a
+                                className="button is-fullwidth has-background-danger has-text-white"
+                                href="/loginPyme">
+                                Iniciar Sesión
+                            </a>
+                        </div>
+                        {/* Y la segunda un boton que redirecciona al registro de un nuevo usuario */}
+                        <div className="mb-4">
+                            <a
+                                className="button is-fullwidth has-background-danger has-text-white"
+                                href="/registerPyme">
+                                Registrarme
+                            </a>
                         </div>
                     </div>
                 </div>
+                <br />
             </section>
             {/* Se importa el componente Footer correspondiente al pie de pagina */}
             <Footer></Footer>

@@ -2,7 +2,7 @@ import React from "react";
 
 function FooterPrincipal() {
     return (
-        <div className="container">
+        <div className="container is-paddingless">
             {/* Se crea el footer con un fondo rosa y un texto mas claro, ademas se divide en 12 columnas */}
             <footer className="footer has-background-danger has-text-danger-light columns is-12">
                 {/* Se crea un div que ocupa 6 columas del total con un margen derecho */}

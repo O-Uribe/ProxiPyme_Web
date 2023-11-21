@@ -49,18 +49,20 @@ export function Login() {
                         {/* Configura un estilo de columna */}
                         <div className="column is-10 is-offset-1">
                             {/* Da un estilo de color negro al titulo */}
-                            <h3 className="title has-text-black">Login</h3>
+                            <h3 className="title has-text-black">
+                                Inicia sesión en "Proxipyme"
+                            </h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
-                            <hr className="login-hr has-background-danger" />
+                            <hr className="login-hr has-text-danger" />
 
                             {/* Crea una caja que contiene al formulario */}
-                            <div className="box">
+                            <div className="box" style={{ boxShadow: '15px 15px 10px pink' }}>
                                 {/*____________ FORM ____________*/}
                                 <form onSubmit={handleSubmit}>
                                     {/* Crea el campo para el correo, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="email"
                                             value={Correo_Electronico}
                                             onChange={(e) =>
@@ -74,7 +76,7 @@ export function Login() {
                                     {/* Crea el campo para la contraseña, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type={
                                                 MostrarContra
                                                     ? "text"

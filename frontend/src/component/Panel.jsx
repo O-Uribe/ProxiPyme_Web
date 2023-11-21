@@ -15,7 +15,7 @@ function Panel() {
                 {/* Cada "a" crea un enlace a una ruta especifica con su respectivo icono */}
                 <div className="column has-text-centered my-4">
                     <a
-                        className="has-text-danger-light"
+                        className="has-text-danger"
                         href={
                             localStorage.getItem("tipoPerfil") === "pyme"
                                 ? "/perfilPyme"
@@ -58,7 +58,7 @@ function Panel() {
                         href="/"
                         onClick={() => {
                             localStorage.clear();
-                            // Aquí puedes agregar cualquier otra lógica que necesites cuando el usuario cierra sesión
+                            // logica necesitaria para cuando el usuario cierra sesion
                         }}>
                         <i className="fas fa-arrow-right"></i> Cerrar Sesión
                     </a>

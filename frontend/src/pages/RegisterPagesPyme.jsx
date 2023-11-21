@@ -64,16 +64,16 @@ export function RegisterPyme() {
                                 ¿Quieres registrarte en "Proxipyme"?
                             </h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
-                            <hr className="login-hr has-background-danger" />
+                            <hr className="login-hr has-text-danger" />
 
                             {/* Crea una caja que contiene al formulario */}
-                            <div className="box">
+                            <div className="box" style={{ boxShadow: '15px 15px 10px pink' }}>
                                 {/*____________ FORM ____________*/}
                                 <form onSubmit={handleSubmit}>
                                     {/* Campos de entrada de la pyme */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={nombrePyme}
                                             onChange={(e) =>
@@ -85,7 +85,7 @@ export function RegisterPyme() {
                                     </div>
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={direccionPyme}
                                             onChange={(e) =>
@@ -97,7 +97,7 @@ export function RegisterPyme() {
                                     </div>
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={encargadoPyme}
                                             onChange={(e) =>
@@ -109,7 +109,7 @@ export function RegisterPyme() {
                                     </div>
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={descripcionPyme}
                                             onChange={(e) =>
@@ -122,8 +122,8 @@ export function RegisterPyme() {
                                         />
                                     </div>
                                     <div className="field">
-                                        <input
-                                            className="input"
+                                        <select
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={categoria}
                                             onChange={(e) =>
@@ -131,13 +131,18 @@ export function RegisterPyme() {
                                             }
                                             placeholder="Categoría de la pyme"
                                             required
-                                        />
+                                        >
+                                            <option value="0"></option>
+                                            <option value="1">Tecnologia</option>
+                                            <option value="2">Comida</option>
+                                            <option value="3">Decoracion</option>
+                                        </select>
                                     </div>
 
                                     {/* Crea el campo para la contraseña, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type={
                                                 MostrarContra
                                                     ? "text"
@@ -149,7 +154,7 @@ export function RegisterPyme() {
                                             }
                                             placeholder="Contraseña"
                                             required
-                                        />
+                                        /> <br />
                                         {/* Boton para mostrar u ocultar contraseña */}
                                         <button
                                             className="button"

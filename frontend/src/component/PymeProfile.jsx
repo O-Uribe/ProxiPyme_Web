@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { profilReqPyme } from "../api/auth.js"; // Asegúrate de importar la función correcta
+import { profilReqPyme } from "../api/auth.js";
 
 import Navbar from "./NavbarPrincipal";
 import Footer from "./FooterPrincipal";

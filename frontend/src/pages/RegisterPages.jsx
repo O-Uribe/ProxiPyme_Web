@@ -61,17 +61,17 @@ export function Register() {
                                 ¿Quieres registrarte en "Proxipyme"?
                             </h3>
                             {/* Crea una linea rosa que separa el titulo del formulario */}
-                            <hr className="login-hr has-background-danger" />
+                            <hr className="login-hr has-text-danger" />
 
                             {/* Crea una caja que contiene al formulario */}
-                            <div className="box">
+                            <div className="box" style={{ boxShadow: '15px 15px 10px pink' }}>
                                 {/*____________ FORM ____________*/}
                                 <form onSubmit={handleSubmit}>
                                     {/* Campos de entrada del usuario */}
                                     {/* PRIMER NOMBRE */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={primerNombre}
                                             onChange={(e) =>
@@ -84,7 +84,7 @@ export function Register() {
                                     {/* PRIMER APELLIDO */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={primerApellido}
                                             onChange={(e) =>
@@ -100,7 +100,7 @@ export function Register() {
                                     {/* Crea el campo para el Nombre, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="text"
                                             value={Nombre_Usuario}
                                             onChange={(e) =>
@@ -114,7 +114,7 @@ export function Register() {
                                     {/* Crea el campo para el correo, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type="email"
                                             value={Correo_Electronico}
                                             onChange={(e) =>
@@ -128,7 +128,7 @@ export function Register() {
                                     {/* Crea el campo para la contraseña, e indica que es un campo obligatorio */}
                                     <div className="field">
                                         <input
-                                            className="input"
+                                            className="input is-danger has-text-danger"
                                             type={
                                                 MostrarContra
                                                     ? "text"

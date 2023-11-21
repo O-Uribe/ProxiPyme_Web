@@ -6,10 +6,9 @@ import { useRedirectIfAuthenticated } from "../context/Autenticacion";
 function NavbarPrincipal() {
     const Buscador = () => {
         const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
-        // const history = useNavigate();
         const navigate = useNavigate();
 
-        const categorias = ["Categoría 1", "Categoría 2", "Categoría 3"]; // Aquí puedes poner tus categorías
+        const categorias = ["Categoría 1", "Categoría 2", "Categoría 3"];
 
         const handleChange = (e) => {
             setCategoriaSeleccionada(e.target.value);
@@ -18,34 +17,36 @@ function NavbarPrincipal() {
 
         const handleSubmit = (e) => {
             e.preventDefault();
-            // navigator("/mapa");
             navigate("/mapa");
         };
 
         return (
-            <div className="control has-icons-left">
-                <input
-                    className="input is-rounded has-text-danger"
-                    placeholder="Buscar por categorias"
-                    value={categoriaSeleccionada}
-                    onChange={handleChange}
-                    list="categorias"
-                />
+            <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className="field has-addons">
+                    <div className="control has-icons-left">
+                        <input
+                            className="input is-rounded has-text-danger"
+                            placeholder="Buscar por categorias"
+                            value={categoriaSeleccionada}
+                            onChange={handleChange}
+                            list="categorias"
+                        />
+                        <span className="icon is-left has-text-danger">
+                            <i className="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
                 <datalist id="categorias">
                     {categorias.map((categoria) => (
                         <option key={categoria} value={categoria} />
                     ))}
                 </datalist>
-                <span className="icon is-left has-text-danger">
-                    <i className="fa fa-search"></i>
-                </span>
-                <button onClick={handleSubmit}>Buscar</button>
-            </div>
+            </form>
         );
     };
 
     return (
-        <div className="container">
+        <div className="container is-paddingless">
             {/* Se crea una barra de navegacion con el contenido centrado horizontalmente y dividido en 12 columnas*/}
             <nav className="navbar is-danger columns is-justify-content-center">
                 <div className="navbar-brand">
@@ -74,7 +75,7 @@ function NavbarPrincipal() {
                             <i className="fas fa-map-marker-alt mr-1"></i>Mapa
                         </a>
                     </div>
-                    <div className="navbar-item ml-3 mr-5">
+                    <div className="navbar-item mr-6">
                         <Buscador />
                     </div>
                     {/* Se crea un menu desplegable que se mostrara cuando el usuario pase el cursor sobre este */}
