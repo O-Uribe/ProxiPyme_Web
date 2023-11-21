@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = "http://localhost:4000/api";
+// const API = "http://localhost:4000/api";
+const API = "https://proxipyme-web.onrender.com/api";
 
 // REGISTER
 export const registrerRecuest = (user) => axios.post(`${API}/register`, user);
