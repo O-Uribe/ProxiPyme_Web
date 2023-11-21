@@ -27,7 +27,8 @@
         "react-leaflet": "^4.2.1",
         "react-router-dom": "^6.19.0",
         "react-switch": "^7.0.0",
-        "reactjs-popup": "^2.0.6"
+        "reactjs-popup": "^2.0.6",
+        "styled-components": "^6.1.1"
     },
     "devDependencies": {
         "@types/react": "^18.2.15",
