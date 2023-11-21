@@ -18,6 +18,8 @@ export const getPymes = async (req, res) => {
         categoria: pyme.categoria,
         descripcionPyme: pyme.descripcionPyme,
         url_img: pyme.url_img,
+        lat: pyme.lat,
+        lng: pyme.lng,
     }));
 
     res.json(pymesData);
@@ -75,13 +77,23 @@ export const getPyme = async (req, res) => {
 };
 
 export const updatePyme = async (req, res) => {
-    const { title, description, date } = req.body;
-    const taskUpdated = await Task.findOneAndUpdate(
+    console.log(req.body);
+    const { lat, lng } = req.body;
+
+    console.log(`Type of lat: ${typeof lat}`); // Imprime el tipo de lat
+    console.log(`Type of lng: ${typeof lng}`); // Imprime el tipo de lng
+
+    if (typeof lat !== "number" || typeof lng !== "number") {
+        return res.status(400).json({ message: "lat and lng must be numbers" });
+    }
+
+    const PymeUpdated = await Pyme.findOneAndUpdate(
         { _id: req.params.id },
-        { title, description, date },
+        { lat: lat, lng: lng },
         { new: true }
     );
-    return res.json(taskUpdated);
+
+    return res.json(PymeUpdated);
 };
 
 export const deletePyme = async (req, res) => {

@@ -8,7 +8,7 @@ function NavbarPrincipal() {
         const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
         const navigate = useNavigate();
 
-        const categorias = ["Categoría 1", "Categoría 2", "Categoría 3"];
+        const categorias = ["Tecnologia", "Comida", "Decoracion"];
 
         const handleChange = (e) => {
             setCategoriaSeleccionada(e.target.value);
@@ -21,7 +21,9 @@ function NavbarPrincipal() {
         };
 
         return (
-            <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <form
+                onSubmit={handleSubmit}
+                style={{ display: "flex", justifyContent: "space-between" }}>
                 <div className="field has-addons">
                     <div className="control has-icons-left">
                         <input

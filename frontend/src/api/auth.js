@@ -19,3 +19,6 @@ export const profilReqPyme = (id) => axios.get(`${API}/profilePyme/${id}`);
 
 export const pymesReq = (user) => axios.get(`${API}/pymes`, user);
 export const pymeProfile = (id) => axios.get(`${API}/pyme/${id}`);
+
+export const updateCord = (id, dat) =>
+    axios.put(`${API}/pymesCords/${id}`, dat);

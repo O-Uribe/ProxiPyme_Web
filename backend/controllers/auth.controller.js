@@ -74,6 +74,8 @@ export const registerPyme = async (req, res) => {
             url_img:
                 "https://i.pinimg.com/1200x/28/f1/a9/28f1a972e13e4281b5273891ead173eb.jpg",
             Contrase: passwordHash,
+            lat: 0,
+            lng: 0,
         });
 
         const userSaved = await newUser.save(); // SAVE IN DB

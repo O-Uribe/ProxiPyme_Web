@@ -67,7 +67,9 @@ export function RegisterPyme() {
                             <hr className="login-hr has-text-danger" />
 
                             {/* Crea una caja que contiene al formulario */}
-                            <div className="box" style={{ boxShadow: '15px 15px 10px pink' }}>
+                            <div
+                                className="box"
+                                style={{ boxShadow: "15px 15px 10px pink" }}>
                                 {/*____________ FORM ____________*/}
                                 <form onSubmit={handleSubmit}>
                                     {/* Campos de entrada de la pyme */}
@@ -130,12 +132,17 @@ export function RegisterPyme() {
                                                 setCategoria(e.target.value)
                                             }
                                             placeholder="Categoría de la pyme"
-                                            required
-                                        >
-                                            <option value="0"></option>
-                                            <option value="1">Tecnologia</option>
-                                            <option value="2">Comida</option>
-                                            <option value="3">Decoracion</option>
+                                            required>
+                                            <option value=""></option>
+                                            <option value="Tecnologia">
+                                                Tecnologia
+                                            </option>
+                                            <option value="Comida">
+                                                Comida
+                                            </option>
+                                            <option value="Decoracion">
+                                                Decoracion
+                                            </option>
                                         </select>
                                     </div>
 
@@ -154,7 +161,8 @@ export function RegisterPyme() {
                                             }
                                             placeholder="Contraseña"
                                             required
-                                        /> <br />
+                                        />{" "}
+                                        <br />
                                         {/* Boton para mostrar u ocultar contraseña */}
                                         <button
                                             className="button"

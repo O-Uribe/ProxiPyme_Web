@@ -1,3 +1,4 @@
+import { Double } from "mongodb";
 import mongoose from "mongoose";
 
 const pymeSchema = new mongoose.Schema(
@@ -39,6 +40,12 @@ const pymeSchema = new mongoose.Schema(
         Contrase: {
             type: String,
             required: true,
+        },
+        lat: {
+            type: Number,
+        },
+        lng: {
+            type: Number,
         },
     },
     {

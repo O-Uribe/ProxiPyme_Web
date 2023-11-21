@@ -1,29 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
+import { Link } from "react-router-dom";
+
+import { pymesReq } from "../api/auth.js";
 
 // Centro por defecto en el campus norte de la Universidad Católica de Temuco
 const CentroPorDefecto = {
     lat: -38.703332,
     lng: -72.549376,
 };
-
-// Array de tiendas
-const tiendas = [
-    {
-        nombrePyme: "Tienda 1",
-        categoria: "Categoría 1",
-        lat: -38.772351932646764,
-        lng: -72.75266073984217,
-    },
-    {
-        nombrePyme: "Tienda 2",
-        categoria: "Categoría 2",
-        lat: -38.771814,
-        lng: -72.753707,
-    },
-    // Más tiendas...
-];
 
 // ICONO TIENDA PROVI
 const tiendaIcon = new Icon({
@@ -35,6 +21,21 @@ const tiendaIcon = new Icon({
 });
 
 const MapView = () => {
+    // DATOS PYME
+    const [tiendas, setProfile] = useState([]);
+    useEffect(() => {
+        async function fetchProfile() {
+            try {
+                const response = await pymesReq();
+                setProfile(response.data);
+                console.log(response.data);
+            } catch (error) {
+                console.error("Error al obtener datos perfil:", error);
+            }
+        }
+        fetchProfile();
+    }, []);
+
     // Define el estado del mapa
     const [Centro, setCentro] = useState(CentroPorDefecto);
     const [Cargando, setCargando] = useState(true);
@@ -87,7 +88,9 @@ const MapView = () => {
                     <option key={categoria} value={categoria} />
                 ))}
             </datalist>
-            <h1 className="title has-text-danger mb-4">{categoriaSeleccionada}</h1>
+            <h1 className="title has-text-danger mb-4">
+                {categoriaSeleccionada}
+            </h1>
             <MapContainer
                 center={Centro}
                 zoom={15}
@@ -118,9 +121,9 @@ const MapView = () => {
                                 alt="Imagen del local"
                             />
                             <p>
-                                <a href="https://www.pagina-web-ejemplo.com">
-                                    Visita nuestra página web
-                                </a>
+                                <Link to={`/pymes/${tienda.id}`}>
+                                    Visita nuestra página
+                                </Link>
                             </p>
                         </Popup>
                     </Marker>

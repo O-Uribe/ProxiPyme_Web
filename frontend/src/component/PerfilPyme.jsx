@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { profilReqPyme } from "../api/auth.js";
+import { profilReqPyme, updateCord } from "../api/auth.js";
 import Navbar from "./NavbarPrincipal";
 import Footer from "./FooterPrincipal";
 
@@ -26,8 +26,11 @@ function PerfilPyme() {
 
     // AGREGAR PRODUCTOS
     const [showModal, setShowModal] = useState(false);
+    const [showModal2, setShowModal2] = useState(false);
     const [productName, setProductName] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+    const [latitud, setLatitud] = useState("");
+    const [longitud, setLongitud] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,6 +39,21 @@ function PerfilPyme() {
         setShowModal(false);
         setProductName("");
         setImageUrl("");
+    };
+
+    const handleSubmit2 = (e) => {
+        e.preventDefault();
+        const lat = Number(latitud);
+        const lng = Number(longitud);
+
+        const cord = {
+            lat,
+            lng,
+        };
+
+        const id = localStorage.getItem("id");
+        updateCord(id, cord); // AuthContext
+        setShowModal2(false);
     };
 
     return (
@@ -47,26 +65,35 @@ function PerfilPyme() {
                 <div className="container columns is-12">
                     {/* La primera muestra el nombre de la pyme */}
                     <div className="column is-5">
-                        <h1 className="title has-text-black" style={{ boxShadow: '15px 15px 10px pink' }}>
+                        <h1
+                            className="title has-text-black"
+                            style={{ boxShadow: "15px 15px 10px pink" }}>
                             {profile.nombrePyme}
-                        </h1><br />
-
+                        </h1>
+                        <br />
                         <button
                             className="button is-danger"
                             onClick={() => setShowModal(true)}>
                             Agregar producto
-                        </button> <br /><br />
-
+                        </button>{" "}
+                        <br />
+                        <br />
                         <div
                             id="myModal"
                             className={showModal ? "modal is-active" : "modal"}>
                             <div className="modal-background"></div>
                             <div
                                 className="modal-content has-background-danger-light"
-                                style={{ width: "600px", height: "400px", boxShadow: '25px 25px 15px pink' }}>
+                                style={{
+                                    width: "600px",
+                                    height: "400px",
+                                    boxShadow: "25px 25px 15px pink",
+                                }}>
                                 <button
                                     className="delete mt-4 ml-4"
-                                    onClick={() => setShowModal(false)}></button>
+                                    onClick={() =>
+                                        setShowModal(false)
+                                    }></button>
                                 <form onSubmit={handleSubmit}>
                                     {/*  */}
                                     <div className="field m-4">
@@ -80,7 +107,9 @@ function PerfilPyme() {
                                                 placeholder="Nombre del producto"
                                                 value={productName}
                                                 onChange={(e) =>
-                                                    setProductName(e.target.value)
+                                                    setProductName(
+                                                        e.target.value
+                                                    )
                                                 }
                                                 required
                                             />
@@ -116,15 +145,87 @@ function PerfilPyme() {
                                 </form>
                             </div>
                         </div>
-
                         <button className="button is-danger">
                             Eliminar producto
                         </button>
-
+                        <br />
+                        <br />
+                        <button
+                            className="button is-danger"
+                            onClick={() => setShowModal2(true)}>
+                            Editar lat y lng
+                        </button>
+                        <div
+                            id="myModal"
+                            className={
+                                showModal2 ? "modal is-active" : "modal"
+                            }>
+                            <div className="modal-background"></div>
+                            <div
+                                className="modal-content has-background-danger-light"
+                                style={{
+                                    width: "600px",
+                                    height: "400px",
+                                    boxShadow: "25px 25px 15px pink",
+                                }}>
+                                <button
+                                    className="delete mt-4 ml-4"
+                                    onClick={() =>
+                                        setShowModal2(false)
+                                    }></button>
+                                <form onSubmit={handleSubmit2}>
+                                    {/*  */}
+                                    <div className="field m-4">
+                                        <label className="label">Latitud</label>
+                                        <div className="control">
+                                            <input
+                                                className="input"
+                                                type="text"
+                                                placeholder="latitud"
+                                                value={latitud}
+                                                onChange={(e) =>
+                                                    setLatitud(e.target.value)
+                                                }
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    {/*  */}
+                                    <div className="field m-4">
+                                        <label className="label">
+                                            Longitud
+                                        </label>
+                                        <div className="control">
+                                            <input
+                                                className="input"
+                                                type="text"
+                                                placeholder="Longitud"
+                                                value={longitud}
+                                                onChange={(e) =>
+                                                    setLongitud(e.target.value)
+                                                }
+                                            />
+                                        </div>
+                                    </div>
+                                    {/*  */}
+                                    <div className="field">
+                                        <div className="control">
+                                            <button
+                                                className="button is-success has-background-danger"
+                                                type="submit">
+                                                Guardar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     {/* La segunda columna muestra la imagen de la Pyme */}
                     <div className="column is-2">
-                        <figure className="image is-128x128 ml-4"><br /><br />
+                        <figure className="image is-128x128 ml-4">
+                            <br />
+                            <br />
                             <img
                                 className="is-rounded"
                                 src="https://www.grafitos.com.co/wp-content/uploads/2021/07/brillantina-celetes-tornasol-900x900.jpg"
@@ -135,21 +236,25 @@ function PerfilPyme() {
 
                     {/* Y la tercera columna muestra la descripcion sobre esta */}
                     <div className="column is-5">
-                        <h1 className="title has-text-black" style={{ boxShadow: '15px 15px 10px pink' }}>Datos Pyme</h1><br />
+                        <h1
+                            className="title has-text-black"
+                            style={{ boxShadow: "15px 15px 10px pink" }}>
+                            Datos Pyme
+                        </h1>
+                        <br />
                         <aside className="is-medium menu">
                             <p className="menu-label has-text-black has-text-left ml-4">
                                 Descripcion: {profile.descripcionPyme} <br />
                                 Direccion: {profile.direccionPyme} <br />
                                 Encargado: {profile.encargadoPyme} <br />
                                 Categoria: {profile.categoria} <br />
-                                <i className="fas fa-map-marker-alt"></i>Ubicacion: 
+                                <i className="fas fa-map-marker-alt"></i>
+                                Ubicacion: {profile.direccionPyme}
                             </p>
                         </aside>
                     </div>
                 </div>
-
                 <hr className="has-text-danger ml-6 mr-6" />
-
                 {/* Se crea un nuevo contenedor que mostrara los productos de la pyme */}
                 <div className="container column is-12">
                     {/* Productos */}
